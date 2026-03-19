@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A11y Lab — 한국어 접근성 학습 도구</title>
+  <meta name="description" content="ARIA 속성 한국어 사전, 접근성 코드 챌린지, WCAG/KWCAG 퀴즈, 실전 검수 사례. 퍼블리셔와 개발자를 위한 접근성 학습 도구.">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/framework.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <header class="al-header" id="site-header"></header>
+  <section class="home-hero">
+    <h1 class="home-hero__title">접근성,<br><em>직접 해보며</em> 배우는 곳</h1>
+    <p class="home-hero__desc">ARIA 속성을 한국어로 찾아보고, 잘못된 코드를 고치고, 실전 검수 사례를 분석하세요.</p>
+  </section>
+  <div class="home-grid">
+    <a href="dict.html" class="home-card">
+      <span class="home-card__label home-card__label--ref">Reference</span>
+      <h3 class="home-card__title">ARIA 속성 한국어 사전</h3>
+      <p class="home-card__desc">68개 ARIA 속성의 한국어 설명, Good/Bad 코드, 4대 스크린리더 발화와 지원 현황</p>
+      <div class="home-card__meta"><span>68개 속성</span><span>·</span><span>발화 데이터 포함</span></div>
+      <div class="home-card__arrow">→</div>
+    </a>
+    <a href="challenge.html" class="home-card">
+      <span class="home-card__label home-card__label--challenge">Challenge</span>
+      <h3 class="home-card__title">이 코드 뭐가 틀렸게?</h3>
+      <p class="home-card__desc">접근성 이슈가 숨어있는 코드를 보고 문제를 찾아 고치는 인터랙티브 챌린지</p>
+      <div class="home-card__meta"><span>난이도별 문제</span><span>·</span><span>Before → After</span></div>
+      <div class="home-card__arrow">→</div>
+    </a>
+    <a href="quiz.html" class="home-card">
+      <span class="home-card__label home-card__label--quiz">Quiz</span>
+      <h3 class="home-card__title">WCAG / KWCAG 퀴즈</h3>
+      <p class="home-card__desc">성공 기준별 퀴즈로 WCAG 2.2와 KWCAG 2.2 이해도를 점검</p>
+      <div class="home-card__meta"><span>87 SC 기반</span><span>·</span><span>랜덤 출제</span></div>
+      <div class="home-card__arrow">→</div>
+    </a>
+    <a href="audit.html" class="home-card">
+      <span class="home-card__label home-card__label--audit">Audit</span>
+      <h3 class="home-card__title">사이트 검수 사례</h3>
+      <p class="home-card__desc">실제 웹사이트를 WCAG 기준으로 검수한 결과를 공유하고 분석</p>
+      <div class="home-card__meta"><span>실전 검수</span><span>·</span><span>리포트 형식</span></div>
+      <div class="home-card__arrow">→</div>
+    </a>
+  </div>
+  <script src="js/common.js"></script>
+  <script>Common.init('home');</script>
+</body>
+</html>

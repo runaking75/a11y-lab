@@ -1,0 +1,26 @@
+{
+  "id":"aria-label","type":"property","category":"widget",
+  "nameKo":"접근 가능한 이름 제공",
+  "descriptionKo":"현재 요소에 접근 가능한 이름(accessible name)을 직접 문자열로 제공합니다. 화면에 보이는 텍스트 레이블이 없거나, 보이는 텍스트만으로는 요소의 목적이 불분명할 때 사용합니다.",
+  "valueType":"string","allowedValues":"텍스트 문자열","defaultValue":"undefined",
+  "applicableTo":["모든 요소"],
+  "relatedAttrs":["aria-labelledby","aria-describedby"],
+  "codeExamples":{
+    "good":{"title":"아이콘 전용 버튼에 레이블 제공","html":"<button aria-label=\"검색\">\n  <svg>...</svg>\n</button>","description":"화면에 텍스트 없이 아이콘만 있는 버튼에 접근 가능한 이름을 부여합니다."},
+    "bad":{"title":"보이는 텍스트가 있는데 aria-label 사용","html":"<button aria-label=\"찾기\">\n  검색\n</button>","description":"보이는 텍스트 '검색'과 aria-label '찾기'가 달라 혼란을 줍니다. 보이는 텍스트가 있으면 aria-labelledby를 사용하세요."}
+  },
+  "screenReaderSupport":{
+    "jaws":{"support":"full","version":"2024+"},
+    "nvda":{"support":"full","version":"2024.1+"},
+    "voiceover":{"support":"full","version":"macOS 14+"},
+    "talkback":{"support":"full","version":"14.1+"}
+  },
+  "screenReaderSpeech":{
+    "context":"아이콘 전용 button에 aria-label=\"검색\" 적용 시",
+    "jaws":"\"검색 버튼\"","nvda":"\"검색 버튼\"",
+    "voiceover":"\"검색, 버튼\"","talkback":"\"검색, 버튼, 이중 탭하여 활성화\""
+  },
+  "wcagSC":[{"id":"1.1.1","name":"Non-text Content","level":"A"},{"id":"4.1.2","name":"Name, Role, Value","level":"A"}],
+  "notes":"aria-labelledby가 aria-label보다 우선합니다. 둘 다 있으면 aria-labelledby의 값이 사용됩니다.",
+  "specUrl":"https://www.w3.org/TR/wai-aria-1.2/#aria-label"
+}
