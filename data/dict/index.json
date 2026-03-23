@@ -1,8 +1,0 @@
-[
-  {"id":"aria-label","type":"property","category":"widget","nameKo":"접근 가능한 이름 제공","support":{"jaws":"full","nvda":"full","voiceover":"full","talkback":"full"}},
-  {"id":"aria-labelledby","type":"property","category":"widget","nameKo":"다른 요소로 이름 참조","support":{"jaws":"full","nvda":"full","voiceover":"full","talkback":"full"}},
-  {"id":"aria-expanded","type":"state","category":"widget","nameKo":"펼침/접힘 상태","support":{"jaws":"full","nvda":"full","voiceover":"full","talkback":"full"}},
-  {"id":"aria-hidden","type":"state","category":"widget","nameKo":"보조기술에서 숨김","support":{"jaws":"full","nvda":"full","voiceover":"full","talkback":"full"}},
-  {"id":"aria-live","type":"property","category":"liveRegion","nameKo":"실시간 영역 알림 설정","support":{"jaws":"full","nvda":"full","voiceover":"partial","talkback":"full"}},
-  {"id":"aria-selected","type":"state","category":"widget","nameKo":"선택 상태 표시","support":{"jaws":"full","nvda":"full","voiceover":"full","talkback":"full"}}
-]
