@@ -1,0 +1,28 @@
+{
+  "id": "image-alt",
+  "title": "이미지 대체 텍스트",
+  "difficulty": "beginner",
+  "category": "naming",
+  "description": "아래 상품 카드에서 접근성 이슈를 찾아보세요.",
+  "beforeCode": "<div class=\"product-card\">\n  <img src=\"sneakers.jpg\">\n  <h3>에어맥스 90</h3>\n  <p>129,000원</p>\n  <img src=\"stars.png\">\n  <span>4.5점</span>\n</div>",
+  "issues": [
+    {
+      "title": "상품 이미지에 alt 속성 없음",
+      "description": "상품 이미지에 alt 속성이 아예 없어 스크린리더가 파일명(sneakers.jpg)을 읽습니다.",
+      "wcagSC": ["1.1.1"],
+      "hint": "img 태그에 alt가 없으면 스크린리더가 뭘 읽을까요?"
+    },
+    {
+      "title": "별점 이미지에 대체 텍스트 없음",
+      "description": "별점 이미지가 정보를 전달하지만 대체 텍스트가 없어 스크린리더가 별점을 알 수 없습니다.",
+      "wcagSC": ["1.1.1"],
+      "hint": "별점 이미지는 장식용인가요, 정보 전달용인가요?"
+    }
+  ],
+  "afterCode": "<div class=\"product-card\">\n  <img src=\"sneakers.jpg\" alt=\"에어맥스 90 화이트 스니커즈\">\n  <h3>에어맥스 90</h3>\n  <p>129,000원</p>\n  <img src=\"stars.png\" alt=\"별점 4.5점\" aria-hidden=\"true\">\n  <span>4.5점</span>\n</div>",
+  "changes": [
+    "상품 이미지에 구체적인 alt 텍스트 추가",
+    "별점 이미지에 alt 추가 + aria-hidden=\"true\" (텍스트 4.5점이 이미 있으므로 중복 방지)"
+  ],
+  "explanation": "정보를 전달하는 이미지에는 반드시 의미 있는 대체 텍스트가 필요합니다. 동일한 정보가 텍스트로 이미 제공되는 경우 이미지에 aria-hidden=\"true\"를 사용해 중복 읽기를 방지할 수 있습니다."
+}

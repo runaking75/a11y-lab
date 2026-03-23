@@ -1,0 +1,296 @@
+[
+  {
+    "id": "q-1-1-1",
+    "standard": "WCAG",
+    "sc": "1.1.1",
+    "scName": "Non-text Content",
+    "level": "A",
+    "category": "perceivable",
+    "type": "ox",
+    "question": "장식용 이미지에는 alt=\"\"(빈 대체 텍스트)를 사용해야 한다.",
+    "answer": true,
+    "explanation": "장식용 이미지는 정보를 전달하지 않으므로 alt=\"\"로 비워 스크린리더가 건너뛰게 합니다. alt 속성을 아예 생략하면 파일명을 읽을 수 있습니다."
+  },
+  {
+    "id": "q-1-1-1b",
+    "standard": "WCAG",
+    "sc": "1.1.1",
+    "scName": "Non-text Content",
+    "level": "A",
+    "category": "perceivable",
+    "type": "choice",
+    "question": "아이콘만 있는 검색 버튼에 접근 가능한 이름을 제공하는 올바른 방법은?",
+    "choices": [
+      "title=\"검색\"을 추가한다",
+      "aria-label=\"검색\"을 추가한다",
+      "placeholder=\"검색\"을 추가한다",
+      "아이콘 옆에 display:none으로 텍스트를 넣는다"
+    ],
+    "answer": 1,
+    "explanation": "aria-label은 접근 가능한 이름을 직접 제공합니다. title은 스크린리더마다 읽는 방식이 다르고, placeholder는 입력 필드 전용이며, display:none은 스크린리더에서도 숨겨집니다."
+  },
+  {
+    "id": "q-1-3-1",
+    "standard": "WCAG",
+    "sc": "1.3.1",
+    "scName": "Info and Relationships",
+    "level": "A",
+    "category": "perceivable",
+    "type": "ox",
+    "question": "시각적으로 제목처럼 보이면 heading 태그를 쓰지 않아도 된다.",
+    "answer": false,
+    "explanation": "시각적 스타일과 관계없이 의미적으로 제목이면 h1~h6 태그를 사용해야 합니다. 스크린리더는 시각적 스타일이 아닌 HTML 태그로 문서 구조를 파악합니다."
+  },
+  {
+    "id": "q-2-1-1",
+    "standard": "WCAG",
+    "sc": "2.1.1",
+    "scName": "Keyboard",
+    "level": "A",
+    "category": "operable",
+    "type": "choice",
+    "question": "다음 중 키보드 접근성에 문제가 있는 코드는?",
+    "choices": [
+      "<button onclick=\"submit()\">전송</button>",
+      "<a href=\"/page\">이동</a>",
+      "<div onclick=\"submit()\">전송</div>",
+      "<input type=\"submit\" value=\"전송\">"
+    ],
+    "answer": 2,
+    "explanation": "div는 기본적으로 키보드 포커스를 받지 못하고 Enter/Space 키 이벤트도 없습니다. button, a, input은 네이티브 키보드 접근을 지원합니다."
+  },
+  {
+    "id": "q-2-4-6",
+    "standard": "WCAG",
+    "sc": "2.4.6",
+    "scName": "Headings and Labels",
+    "level": "AA",
+    "category": "operable",
+    "type": "ox",
+    "question": "페이지에서 h1 다음에 바로 h3을 사용해도 WCAG 위반이 아니다.",
+    "answer": true,
+    "explanation": "WCAG 2.4.6은 제목이 콘텐츠를 설명해야 한다고 요구하지, 제목 레벨 순서를 강제하지 않습니다. 다만 1.3.1에서 정보 관계를 전달해야 하므로 논리적 순서를 권장합니다."
+  },
+  {
+    "id": "q-4-1-2",
+    "standard": "WCAG",
+    "sc": "4.1.2",
+    "scName": "Name, Role, Value",
+    "level": "A",
+    "category": "robust",
+    "type": "choice",
+    "question": "커스텀 토글 스위치에 반드시 필요한 ARIA 속성 조합은?",
+    "choices": [
+      "role=\"switch\" + aria-label",
+      "role=\"switch\" + aria-checked + 접근 가능한 이름",
+      "role=\"checkbox\" + aria-expanded",
+      "aria-pressed + aria-label"
+    ],
+    "answer": 1,
+    "explanation": "switch 역할에는 현재 상태(aria-checked)와 접근 가능한 이름이 모두 필요합니다. aria-expanded는 펼침/접힘용이고, aria-pressed는 토글 버튼용입니다."
+  },
+  {
+    "id": "q-kwcag-1-1-1",
+    "standard": "KWCAG",
+    "sc": "1.1.1",
+    "scName": "대체 텍스트 제공",
+    "level": "",
+    "category": "perceivable",
+    "type": "ox",
+    "question": "KWCAG 2.2에서 텍스트가 포함된 이미지의 대체 텍스트는 이미지 내 텍스트와 동일해야 한다.",
+    "answer": true,
+    "explanation": "KWCAG 2.2 '1.1.1 대체 텍스트 제공'에 따르면 텍스트가 포함된 이미지의 대체 텍스트는 해당 텍스트와 동일하게 제공해야 합니다."
+  },
+  {
+    "id": "q-kwcag-2-1-1",
+    "standard": "KWCAG",
+    "sc": "2.1.1",
+    "scName": "키보드 사용 보장",
+    "level": "",
+    "category": "operable",
+    "type": "choice",
+    "question": "KWCAG 2.2에서 키보드 접근성을 위해 모든 기능에 보장되어야 하는 것은?",
+    "choices": [
+      "마우스와 동일한 호버 효과",
+      "키보드만으로 접근, 사용 가능",
+      "탭 순서가 시각적 순서와 일치",
+      "포커스 표시가 항상 보임"
+    ],
+    "answer": 1,
+    "explanation": "KWCAG 2.2 '2.1.1 키보드 사용 보장'은 모든 기능을 키보드만으로 접근하고 사용할 수 있어야 한다고 요구합니다. 나머지는 관련 있지만 이 항목의 핵심 요구사항은 아닙니다."
+  },
+  {
+    "id": "q-1-4-3",
+    "standard": "WCAG",
+    "sc": "1.4.3",
+    "scName": "Contrast (Minimum)",
+    "level": "AA",
+    "category": "perceivable",
+    "type": "choice",
+    "question": "WCAG 2.2에서 일반 텍스트의 최소 명도 대비는?",
+    "choices": [
+      "3:1",
+      "4.5:1",
+      "7:1",
+      "2:1"
+    ],
+    "answer": 1,
+    "explanation": "일반 크기 텍스트는 배경과 4.5:1 이상의 명도 대비가 필요합니다. 큰 텍스트(18pt 이상 또는 14pt 볼드)는 3:1로 완화됩니다."
+  },
+  {
+    "id": "q-2-4-7",
+    "standard": "WCAG",
+    "sc": "2.4.7",
+    "scName": "Focus Visible",
+    "level": "AA",
+    "category": "operable",
+    "type": "ox",
+    "question": "outline: none으로 포커스 표시를 제거하면 WCAG 위반이다.",
+    "answer": true,
+    "explanation": "키보드 사용자는 현재 포커스 위치를 시각적으로 확인할 수 있어야 합니다. outline을 제거하려면 반드시 동등한 커스텀 포커스 스타일을 제공해야 합니다."
+  },
+  {
+    "id": "q-3-3-1",
+    "standard": "WCAG",
+    "sc": "3.3.1",
+    "scName": "Error Identification",
+    "level": "A",
+    "category": "understandable",
+    "type": "choice",
+    "question": "폼 유효성 에러를 표시할 때 반드시 해야 하는 것은?",
+    "choices": [
+      "에러 필드를 빨간색으로 표시한다",
+      "에러 내용을 텍스트로 설명하고 해당 필드와 연결한다",
+      "alert()으로 에러를 알린다",
+      "페이지 상단에 에러 수를 표시한다"
+    ],
+    "answer": 1,
+    "explanation": "색상만으로 에러를 표시하면 색각 이상 사용자가 인지할 수 없습니다. 에러는 텍스트로 설명하고, aria-describedby 등으로 해당 입력 필드와 프로그래밍적으로 연결해야 합니다."
+  },
+  {
+    "id": "q-4-1-3",
+    "standard": "WCAG",
+    "sc": "4.1.3",
+    "scName": "Status Messages",
+    "level": "AA",
+    "category": "robust",
+    "type": "ox",
+    "question": "장바구니에 상품을 담은 후 토스트 알림이 나타나면, 포커스를 토스트로 이동시켜야 한다.",
+    "answer": false,
+    "explanation": "토스트 같은 상태 메시지는 포커스 이동 없이 aria-live 영역을 통해 스크린리더에 전달해야 합니다. 포커스를 이동시키면 사용자의 현재 작업 흐름이 중단됩니다."
+  },
+  {
+    "id": "q-2-5-8",
+    "standard": "WCAG",
+    "sc": "2.5.8",
+    "scName": "Target Size (Minimum)",
+    "level": "AA",
+    "category": "operable",
+    "type": "choice",
+    "question": "WCAG 2.2에서 추가된 최소 터치 타겟 크기는?",
+    "choices": [
+      "44x44px",
+      "24x24px",
+      "48x48px",
+      "32x32px"
+    ],
+    "answer": 1,
+    "explanation": "WCAG 2.2의 2.5.8 Target Size (Minimum)은 최소 24x24 CSS 픽셀을 요구합니다. 44x44px은 AAA 수준(2.5.5)의 권장 크기입니다."
+  },
+  {
+    "id": "q-1-3-5",
+    "standard": "WCAG",
+    "sc": "1.3.5",
+    "scName": "Identify Input Purpose",
+    "level": "AA",
+    "category": "perceivable",
+    "type": "ox",
+    "question": "이름, 이메일 같은 개인 정보 입력 필드에 autocomplete 속성을 제공하면 WCAG 준수에 도움이 된다.",
+    "answer": true,
+    "explanation": "autocomplete 속성은 입력 필드의 용도를 프로그래밍적으로 알려줍니다. 인지 장애가 있는 사용자에게 자동 완성 기능을 제공하고, 브라우저가 적절한 아이콘이나 힌트를 표시할 수 있게 합니다."
+  },
+  {
+    "id": "q-kwcag-1-3-1",
+    "standard": "KWCAG",
+    "sc": "1.3.1",
+    "scName": "색에 무관한 콘텐츠 인식",
+    "level": "",
+    "category": "perceivable",
+    "type": "ox",
+    "question": "KWCAG 2.2에서 링크를 파란색으로만 구분하고 밑줄이 없으면 위반이다.",
+    "answer": true,
+    "explanation": "KWCAG 2.2 '1.3.1 색에 무관한 콘텐츠 인식'에 따르면 색상만으로 정보를 전달해서는 안 됩니다. 링크는 밑줄, 볼드 등 색상 외의 방법으로도 구분되어야 합니다."
+  },
+  {
+    "id": "q-kwcag-2-2-1",
+    "standard": "KWCAG",
+    "sc": "2.2.1",
+    "scName": "초점 이동과 표시",
+    "level": "",
+    "category": "operable",
+    "type": "choice",
+    "question": "KWCAG 2.2에서 초점(포커스)에 대해 요구하는 사항이 아닌 것은?",
+    "choices": [
+      "초점은 논리적 순서로 이동해야 한다",
+      "초점을 받은 요소는 시각적으로 구별되어야 한다",
+      "초점이 화면 밖으로 나가면 안 된다",
+      "초점 색상은 반드시 파란색이어야 한다"
+    ],
+    "answer": 3,
+    "explanation": "KWCAG 2.2 '2.2.1 초점 이동과 표시'는 논리적 이동 순서, 시각적 구별, 화면 내 유지를 요구하지만, 특정 색상을 강제하지 않습니다."
+  },
+  {
+    "id": "q-kwcag-3-1-1",
+    "standard": "KWCAG",
+    "sc": "3.1.1",
+    "scName": "기본 언어 표시",
+    "level": "",
+    "category": "understandable",
+    "type": "ox",
+    "question": "KWCAG 2.2에서 웹 페이지의 기본 언어를 HTML lang 속성으로 표시하는 것은 필수이다.",
+    "answer": true,
+    "explanation": "KWCAG 2.2 '3.1.1 기본 언어 표시'에 따르면 웹 페이지의 기본 인간 언어를 프로그래밍적으로 알 수 있도록 해야 합니다. 한국어 페이지는 lang=\"ko\"를 사용합니다."
+  },
+  {
+    "id": "q-kwcag-4-2-1",
+    "standard": "KWCAG",
+    "sc": "4.2.1",
+    "scName": "웹 애플리케이션 접근성 준수",
+    "level": "",
+    "category": "robust",
+    "type": "ox",
+    "question": "KWCAG 2.2에서 웹 애플리케이션은 WAI-ARIA를 사용하여 접근성을 보장해야 한다.",
+    "answer": true,
+    "explanation": "KWCAG 2.2 '4.2.1 웹 애플리케이션 접근성 준수'에 따르면 콘텐츠에 포함된 웹 애플리케이션은 접근성이 있어야 하며, WAI-ARIA를 활용하여 접근성을 보장해야 합니다."
+  },
+  {
+    "id": "q-2-1-1b",
+    "standard": "WCAG",
+    "sc": "2.1.1",
+    "scName": "Keyboard",
+    "level": "A",
+    "category": "operable",
+    "type": "ox",
+    "question": "tabindex=\"0\"을 div에 추가하면 키보드 접근성이 완전히 보장된다.",
+    "answer": false,
+    "explanation": "tabindex=\"0\"은 포커스만 가능하게 합니다. 클릭 동작을 하려면 Enter/Space 키 이벤트도 별도로 처리해야 합니다. 가능하면 button이나 a 같은 네이티브 요소를 사용하는 것이 좋습니다."
+  },
+  {
+    "id": "q-1-4-11",
+    "standard": "WCAG",
+    "sc": "1.4.11",
+    "scName": "Non-text Contrast",
+    "level": "AA",
+    "category": "perceivable",
+    "type": "choice",
+    "question": "WCAG 2.2에서 UI 컴포넌트(버튼, 입력 필드 등)의 최소 명도 대비는?",
+    "choices": [
+      "4.5:1",
+      "3:1",
+      "7:1",
+      "2:1"
+    ],
+    "answer": 1,
+    "explanation": "UI 컴포넌트와 그래픽 요소는 배경과 최소 3:1의 명도 대비가 필요합니다. 이는 텍스트(4.5:1)보다 낮지만, 버튼 테두리, 체크박스, 차트 등에 적용됩니다."
+  }
+]

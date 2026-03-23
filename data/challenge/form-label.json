@@ -1,0 +1,23 @@
+{
+  "id": "form-label",
+  "title": "폼 레이블",
+  "difficulty": "beginner",
+  "category": "naming",
+  "description": "아래 로그인 폼에서 접근성 이슈를 찾아보세요.",
+  "beforeCode": "<form>\n  <input type=\"text\" placeholder=\"이메일\">\n  <input type=\"password\" placeholder=\"비밀번호\">\n  <button type=\"submit\">로그인</button>\n</form>",
+  "issues": [
+    {
+      "title": "입력 필드에 레이블이 없음",
+      "description": "placeholder만으로 레이블을 대체하고 있습니다. placeholder는 입력 시 사라지며, 스크린리더에 따라 일관되게 읽히지 않습니다.",
+      "wcagSC": ["1.3.1", "3.3.2"],
+      "hint": "placeholder는 레이블을 대체할 수 있나요?"
+    }
+  ],
+  "afterCode": "<form>\n  <div>\n    <label for=\"email\">이메일</label>\n    <input type=\"text\" id=\"email\">\n  </div>\n  <div>\n    <label for=\"password\">비밀번호</label>\n    <input type=\"password\" id=\"password\">\n  </div>\n  <button type=\"submit\">로그인</button>\n</form>",
+  "changes": [
+    "각 입력 필드에 label 요소 추가",
+    "label의 for와 input의 id를 연결",
+    "placeholder 의존 제거"
+  ],
+  "explanation": "모든 입력 필드에는 프로그래밍적으로 연결된 레이블이 필요합니다. label 요소의 for 속성과 input의 id를 일치시키면 클릭 영역도 넓어지고, 스크린리더가 정확히 읽을 수 있습니다."
+}

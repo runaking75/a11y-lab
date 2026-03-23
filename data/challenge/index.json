@@ -1,0 +1,66 @@
+[
+  {
+    "id": "icon-button",
+    "title": "아이콘 버튼",
+    "description": "접근 가능한 이름이 없는 아이콘 버튼",
+    "difficulty": "beginner",
+    "category": "naming",
+    "issueCount": 1
+  },
+  {
+    "id": "form-label",
+    "title": "폼 레이블",
+    "description": "placeholder만으로 레이블을 대체한 입력 폼",
+    "difficulty": "beginner",
+    "category": "naming",
+    "issueCount": 1
+  },
+  {
+    "id": "image-alt",
+    "title": "이미지 대체 텍스트",
+    "description": "대체 텍스트가 없거나 불충분한 이미지",
+    "difficulty": "beginner",
+    "category": "naming",
+    "issueCount": 2
+  },
+  {
+    "id": "accordion",
+    "title": "아코디언",
+    "description": "ARIA 역할과 상태가 빠진 FAQ 아코디언",
+    "difficulty": "intermediate",
+    "category": "widget",
+    "issueCount": 3
+  },
+  {
+    "id": "tab-interface",
+    "title": "탭 인터페이스",
+    "description": "ARIA 역할과 상태가 빠진 탭 UI",
+    "difficulty": "intermediate",
+    "category": "widget",
+    "issueCount": 4
+  },
+  {
+    "id": "live-region",
+    "title": "실시간 알림",
+    "description": "스크린리더에 전달되지 않는 토스트 알림",
+    "difficulty": "intermediate",
+    "category": "widget",
+    "issueCount": 2
+  },
+  {
+    "id": "modal-dialog",
+    "title": "모달 다이얼로그",
+    "description": "포커스 관리와 접근성이 빠진 모달",
+    "difficulty": "advanced",
+    "category": "widget",
+    "issueCount": 3
+  },
+  {
+    "id": "custom-select",
+    "title": "커스텀 셀렉트",
+    "description": "네이티브 동작 없이 구현된 커스텀 드롭다운",
+    "difficulty": "advanced",
+    "category": "widget",
+    "issueCount": 4
+  }
+]

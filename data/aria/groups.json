@@ -1,0 +1,134 @@
+[
+  {
+    "id": "naming",
+    "title": "이름/설명 제공",
+    "color": "purple",
+    "attrs": ["aria-label", "aria-labelledby", "aria-describedby"],
+    "comparison": {
+      "rows": [
+        {
+          "label": "용도",
+          "values": ["직접 작성한 이름(핵심 이름)", "참조한 이름", "참조한 설명(추가 정보)"]
+        },
+        {
+          "label": "값의 형태",
+          "values": ["텍스트 String", "참조 텍스트 id 값", "참조 텍스트 id 값"]
+        },
+        {
+          "label": "특징",
+          "values": [
+            "화면에 보이지 않는 레이블 제공, 기존 텍스트를 완전히 대체, 짧고 명확한 이름에 적합",
+            "이미 있는 텍스트를 재사용, 여러 요소 조합 가능(공백으로 구분), 화면에 보이는 레이블과 일치",
+            "이름 뒤에 추가 정보 제공, 도움말/에러/지시사항에 적합, 이름과 설명을 구분"
+          ]
+        },
+        {
+          "label": "사용 지침",
+          "values": [
+            "아이콘 전용 버튼, 시각적 레이블이 없는 경우, 간단한 이름 지정",
+            "이미 있는 제목/텍스트 활용, 여러 텍스트 조합 필요, 섹션/영역 이름 지정",
+            "입력 필드 도움말, 에러 메시지 연결, 복잡한 UI 사용법 설명"
+          ]
+        },
+        {
+          "label": "포커스 모드",
+          "values": ["읽음", "읽음", "읽음"]
+        },
+        {
+          "label": "가상 커서",
+          "values": ["읽음(항상 필요한 핵심 정보)", "읽음(항상 필요한 핵심 정보)", "안 읽음(상호작용할 때 필요한 추가 정보)"]
+        }
+      ]
+    },
+    "notes": [
+      "우선순위: aria-labelledby > aria-label > 기본 레이블",
+      "aria-label은 값에 문자열을 넣는 것이므로 다국어 일때 문제가 될 수 있음",
+      "aria-labelledby는 숨겨진 요소(텍스트)도 참조 가능",
+      "aria-describedby에서 참조 값인 aria-labelledby를 참조할 수는 없다"
+    ]
+  },
+  {
+    "id": "selection",
+    "title": "선택/체크 계열",
+    "color": "orange",
+    "attrs": ["aria-checked", "aria-selected", "aria-pressed"],
+    "comparison": {
+      "rows": [
+        {
+          "label": "용도",
+          "values": ["체크 상태 표시", "선택 상태 표시", "눌림 상태 표시"]
+        },
+        {
+          "label": "적용 대상",
+          "values": ["checkbox, radio, switch, menuitemcheckbox", "tab, option, gridcell, row, treeitem", "button (토글 버튼)"]
+        },
+        {
+          "label": "허용 값",
+          "values": ["true / false / mixed", "true / false / undefined", "true / false / mixed / undefined"]
+        },
+        {
+          "label": "사용 지침",
+          "values": ["체크박스/라디오 체크 상태", "탭/리스트에서 현재 선택 항목", "토글 버튼의 눌림/해제 상태"]
+        }
+      ]
+    },
+    "notes": [
+      "aria-checked는 체크박스/라디오, aria-selected는 탭/리스트, aria-pressed는 토글 버튼 — 용도를 혼동하지 말 것",
+      "aria-checked=\"mixed\"는 일부만 선택된 상위 체크박스에 사용"
+    ]
+  },
+  {
+    "id": "hiding",
+    "title": "숨김 계열",
+    "color": "teal",
+    "attrs": ["aria-hidden"],
+    "comparison": {
+      "rows": [
+        {
+          "label": "용도",
+          "values": ["접근성 트리에서 숨김"]
+        },
+        {
+          "label": "시각적 숨김",
+          "values": ["아니오 (화면에는 보임)"]
+        },
+        {
+          "label": "키보드 접근",
+          "values": ["가능 (위험 — 포커스 가능 자손 주의)"]
+        }
+      ]
+    },
+    "notes": [
+      "aria-hidden=\"true\"인 요소 안에 포커스 가능한 자손이 있으면 WCAG 4.1.2 위반",
+      "대안: inert 속성 사용 시 접근성 트리 + 키보드 접근 모두 차단",
+      "display:none이나 hidden 속성은 시각적+접근성 모두 숨김"
+    ]
+  },
+  {
+    "id": "live",
+    "title": "라이브 영역",
+    "color": "amber",
+    "attrs": ["aria-live", "aria-atomic", "aria-relevant"],
+    "comparison": {
+      "rows": [
+        {
+          "label": "용도",
+          "values": ["알림 방식 설정", "전체/부분 읽기 설정", "어떤 변경을 알릴지 설정"]
+        },
+        {
+          "label": "허용 값",
+          "values": ["off / polite / assertive", "true / false", "additions / removals / text / all"]
+        },
+        {
+          "label": "기본값",
+          "values": ["off", "false", "additions text"]
+        }
+      ]
+    },
+    "notes": [
+      "aria-live 영역은 페이지 로드 시 DOM에 이미 존재해야 함",
+      "assertive는 남용하면 사용자 경험을 해침 — 긴급한 경우만 사용",
+      "aria-atomic=\"true\"이면 영역 전체를 다시 읽음"
+    ]
+  }
+]
