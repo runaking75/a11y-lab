@@ -1,0 +1,27 @@
+{
+  "id": "aria-disabled",
+  "nameKo": "비활성 상태 표시",
+  "type": "state",
+  "category": "widget",
+  "description": "요소가 보이지만 사용할 수 없는 비활성 상태임을 나타냅니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "full",
+    "talkback": "full"
+  },
+  "wcagSC": [
+    "4.1.2"
+  ],
+  "goodCode": "<button aria-disabled=\"true\">\n  제출\n</button>",
+  "badCode": "<button disabled style=\"opacity:0.5\">\n  제출\n</button>\n<!-- 네이티브 disabled도 가능하지만\n     aria-disabled는 포커스 유지 가능 -->",
+  "speechContext": "button에 aria-disabled=\"true\" 적용 시",
+  "speech": {
+    "jaws": "제출, 사용할 수 없음, 버튼",
+    "nvda": "제출, 버튼, 사용할 수 없음",
+    "voiceover": "제출, 흐리게 표시됨, 버튼",
+    "talkback": "제출, 사용 중지됨, 버튼"
+  },
+  "notes": "네이티브 disabled와 달리 포커스를 받을 수 있어 스크린리더가 존재를 인식합니다.",
+  "supportNote": "supported"
+}

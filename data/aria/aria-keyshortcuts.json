@@ -1,0 +1,27 @@
+{
+  "id": "aria-keyshortcuts",
+  "nameKo": "키보드 단축키 표시",
+  "type": "property",
+  "category": "widget",
+  "description": "요소를 활성화하거나 포커스를 이동시키는 키보드 단축키를 표시합니다.",
+  "screenReaderSupport": {
+    "jaws": "partial",
+    "nvda": "none",
+    "voiceover": "none",
+    "talkback": "none"
+  },
+  "wcagSC": [
+    "4.1.2"
+  ],
+  "goodCode": "<button aria-keyshortcuts=\"Control+S\">\n  저장\n</button>",
+  "badCode": "<button title=\"Ctrl+S\">\n  저장\n</button>",
+  "speechContext": "aria-keyshortcuts 적용 시",
+  "speech": {
+    "jaws": "저장, 버튼, Ctrl+S (일부 설정)",
+    "nvda": "저장, 버튼",
+    "voiceover": "저장, 버튼",
+    "talkback": "저장, 버튼"
+  },
+  "notes": "지원이 매우 제한적입니다.",
+  "supportNote": "unknown - very limited support"
+}

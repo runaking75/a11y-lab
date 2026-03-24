@@ -1,0 +1,27 @@
+{
+  "id": "aria-required",
+  "nameKo": "필수 입력 표시",
+  "type": "property",
+  "category": "widget",
+  "description": "폼 제출 전에 반드시 입력해야 하는 필수 필드임을 나타냅니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "full",
+    "talkback": "full"
+  },
+  "wcagSC": [
+    "3.3.2"
+  ],
+  "goodCode": "<label for=\"name\">이름 (필수)</label>\n<input type=\"text\" id=\"name\"\n  aria-required=\"true\">",
+  "badCode": "<label for=\"name\">이름 *</label>\n<input type=\"text\" id=\"name\">\n<!-- * 표시만으로 필수 정보 미전달 -->",
+  "speechContext": "input에 aria-required=\"true\" 적용 시",
+  "speech": {
+    "jaws": "이름, 편집, 필수",
+    "nvda": "이름, 편집, 필수",
+    "voiceover": "이름, 필수, 텍스트 필드",
+    "talkback": "이름, 필수, 수정 상자"
+  },
+  "notes": "HTML required 속성도 동일한 효과를 제공합니다.",
+  "supportNote": "supported"
+}

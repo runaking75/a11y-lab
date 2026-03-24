@@ -1,0 +1,27 @@
+{
+  "id": "aria-description",
+  "nameKo": "접근 가능한 설명 제공",
+  "type": "property",
+  "category": "widget",
+  "description": "요소에 대한 설명을 문자열로 직접 제공합니다. aria-describedby의 문자열 버전입니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "partial",
+    "talkback": "partial"
+  },
+  "wcagSC": [
+    "1.3.1"
+  ],
+  "goodCode": "<button aria-description=\"변경사항을 저장합니다\">\n  저장\n</button>",
+  "badCode": "<button title=\"변경사항을 저장합니다\">\n  저장\n</button>\n<!-- title은 일관되게 읽히지 않음 -->",
+  "speechContext": "aria-description 적용 시",
+  "speech": {
+    "jaws": "저장, 버튼, 변경사항을 저장합니다",
+    "nvda": "저장, 버튼, 변경사항을 저장합니다",
+    "voiceover": "저장, 버튼",
+    "talkback": "저장, 버튼"
+  },
+  "notes": "ARIA 1.3에서 추가된 비교적 새로운 속성입니다.",
+  "supportNote": "unknown - relatively new (ARIA 1.3)"
+}

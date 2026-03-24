@@ -1,0 +1,27 @@
+{
+  "id": "aria-valuemin",
+  "nameKo": "최솟값 설정",
+  "type": "property",
+  "category": "widget",
+  "description": "범위 위젯의 최솟값을 설정합니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "full",
+    "talkback": "full"
+  },
+  "wcagSC": [
+    "4.1.2"
+  ],
+  "goodCode": "<div role=\"slider\"\n  aria-valuemin=\"0\"\n  aria-valuemax=\"100\"\n  aria-valuenow=\"25\"\n  tabindex=\"0\">",
+  "badCode": "<div role=\"slider\"\n  tabindex=\"0\">\n  <!-- 범위 미설정 -->\n</div>",
+  "speechContext": "role=\"slider\" aria-valuemin=\"0\" 적용 시",
+  "speech": {
+    "jaws": "슬라이더, 25, 0~100",
+    "nvda": "슬라이더, 25",
+    "voiceover": "25%, 슬라이더",
+    "talkback": "25%, 슬라이더"
+  },
+  "notes": "aria-valuemax, aria-valuenow과 함께 사용합니다.",
+  "supportNote": "unknown (no tests)"
+}

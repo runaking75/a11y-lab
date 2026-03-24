@@ -1,0 +1,27 @@
+{
+  "id": "aria-invalid",
+  "nameKo": "유효하지 않은 값 표시",
+  "type": "state",
+  "category": "widget",
+  "description": "입력된 값이 유효하지 않음을 나타냅니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "full",
+    "talkback": "partial"
+  },
+  "wcagSC": [
+    "3.3.1"
+  ],
+  "goodCode": "<input type=\"email\"\n  aria-invalid=\"true\"\n  aria-describedby=\"error\">\n<span id=\"error\">\n  이메일 형식이 올바르지 않습니다.\n</span>",
+  "badCode": "<input type=\"email\"\n  class=\"error-field\">\n<!-- 시각적으로만 에러 표시 -->",
+  "speechContext": "input에 aria-invalid=\"true\" 적용 시",
+  "speech": {
+    "jaws": "이메일, 편집, 잘못됨",
+    "nvda": "이메일, 편집, 잘못됨",
+    "voiceover": "이메일, 잘못됨, 텍스트 필드",
+    "talkback": "이메일, 잘못됨, 수정 상자"
+  },
+  "notes": "aria-errormessage와 함께 사용하면 에러 내용도 전달됩니다.",
+  "supportNote": "partial (57/66) - TalkBack failing true"
+}

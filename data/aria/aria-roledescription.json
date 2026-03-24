@@ -1,0 +1,27 @@
+{
+  "id": "aria-roledescription",
+  "nameKo": "역할 설명 재정의",
+  "type": "property",
+  "category": "widget",
+  "description": "요소의 역할을 보다 이해하기 쉬운 텍스트로 재정의합니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "partial",
+    "talkback": "partial"
+  },
+  "wcagSC": [
+    "4.1.2"
+  ],
+  "goodCode": "<div role=\"region\"\n  aria-roledescription=\"슬라이드\"\n  aria-label=\"상품 갤러리\">\n  ...\n</div>",
+  "badCode": "<div role=\"region\"\n  aria-label=\"상품 갤러리\">\n  <!-- '영역'으로 읽힘 -->\n</div>",
+  "speechContext": "aria-roledescription=\"슬라이드\" 적용 시",
+  "speech": {
+    "jaws": "상품 갤러리, 슬라이드",
+    "nvda": "상품 갤러리, 슬라이드",
+    "voiceover": "상품 갤러리, 슬라이드",
+    "talkback": "상품 갤러리, 슬라이드"
+  },
+  "notes": "제한적으로 사용하세요. 잘못 사용하면 혼란을 줄 수 있습니다.",
+  "supportNote": "partial (17/22)"
+}

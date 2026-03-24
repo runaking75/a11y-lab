@@ -1,0 +1,27 @@
+{
+  "id": "aria-details",
+  "nameKo": "상세 설명 연결",
+  "type": "property",
+  "category": "relationship",
+  "description": "요소에 대한 상세 설명(테이블, 리스트 등 구조화된 콘텐츠)을 제공하는 요소를 참조합니다.",
+  "screenReaderSupport": {
+    "jaws": "partial",
+    "nvda": "partial",
+    "voiceover": "none",
+    "talkback": "none"
+  },
+  "wcagSC": [
+    "1.3.1"
+  ],
+  "goodCode": "<img src=\"chart.png\" alt=\"매출 차트\"\n  aria-details=\"chart-data\">\n<table id=\"chart-data\">\n  ...\n</table>",
+  "badCode": "<img src=\"chart.png\" alt=\"매출 차트\">\n<table>...</table>\n<!-- 차트와 데이터 테이블 연결 없음 -->",
+  "speechContext": "aria-details 적용 시",
+  "speech": {
+    "jaws": "매출 차트, 그래픽, 상세 정보 있음",
+    "nvda": "매출 차트, 그래픽, 상세 정보 있음",
+    "voiceover": "매출 차트, 이미지",
+    "talkback": "매출 차트, 이미지"
+  },
+  "notes": "aria-describedby와 달리 구조화된 상세 설명에 사용됩니다. 지원이 제한적입니다.",
+  "supportNote": "unknown - limited support"
+}

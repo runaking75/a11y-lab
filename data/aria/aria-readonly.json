@@ -1,0 +1,27 @@
+{
+  "id": "aria-readonly",
+  "nameKo": "읽기 전용 표시",
+  "type": "property",
+  "category": "widget",
+  "description": "요소의 값을 변경할 수 없지만 다른 방식으로는 조작 가능함을 나타냅니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "partial",
+    "talkback": "partial"
+  },
+  "wcagSC": [
+    "4.1.2"
+  ],
+  "goodCode": "<input type=\"text\" value=\"2025-03-24\"\n  aria-readonly=\"true\">",
+  "badCode": "<input type=\"text\" value=\"2025-03-24\"\n  readonly>\n<!-- 네이티브 readonly도 가능 -->",
+  "speechContext": "input에 aria-readonly=\"true\" 적용 시",
+  "speech": {
+    "jaws": "날짜, 편집, 읽기 전용",
+    "nvda": "날짜, 편집, 읽기 전용",
+    "voiceover": "날짜, 텍스트 필드",
+    "talkback": "날짜, 수정 상자"
+  },
+  "notes": "disabled와 달리 값을 복사하거나 선택할 수 있습니다.",
+  "supportNote": "unknown (no dedicated tests)"
+}

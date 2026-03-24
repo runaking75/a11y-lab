@@ -1,0 +1,27 @@
+{
+  "id": "aria-controls",
+  "nameKo": "제어 대상 연결",
+  "type": "property",
+  "category": "relationship",
+  "description": "현재 요소가 제어하는 대상 요소의 id를 참조합니다.",
+  "screenReaderSupport": {
+    "jaws": "partial",
+    "nvda": "partial",
+    "voiceover": "none",
+    "talkback": "none"
+  },
+  "wcagSC": [
+    "4.1.2"
+  ],
+  "goodCode": "<button aria-expanded=\"true\"\n  aria-controls=\"panel\">\n  메뉴\n</button>\n<div id=\"panel\">내용</div>",
+  "badCode": "<button onclick=\"toggle()\">\n  메뉴\n</button>\n<div>내용</div>",
+  "speechContext": "button에 aria-controls 적용 시",
+  "speech": {
+    "jaws": "(aria-controls 자체는 알리지 않음)",
+    "nvda": "(aria-controls 자체는 알리지 않음)",
+    "voiceover": "(aria-controls 자체는 알리지 않음)",
+    "talkback": "(aria-controls 자체는 알리지 않음)"
+  },
+  "notes": "사용자에게 직접 알리지 않지만 프로그래밍적 관계를 형성합니다. 스펙에서 요구하면 반드시 사용하세요.",
+  "supportNote": "partial (9/41) - most SR ignore by design"
+}

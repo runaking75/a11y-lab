@@ -1,0 +1,27 @@
+{
+  "id": "aria-multiselectable",
+  "nameKo": "다중 선택 가능 표시",
+  "type": "property",
+  "category": "widget",
+  "description": "listbox, grid, tablist, tree 등에서 여러 항목을 동시에 선택할 수 있음을 나타냅니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "partial",
+    "talkback": "partial"
+  },
+  "wcagSC": [
+    "4.1.2"
+  ],
+  "goodCode": "<ul role=\"listbox\"\n  aria-multiselectable=\"true\"\n  aria-label=\"좋아하는 과일\">\n  <li role=\"option\" aria-selected=\"true\">사과</li>\n  <li role=\"option\" aria-selected=\"false\">바나나</li>\n</ul>",
+  "badCode": "<ul role=\"listbox\">\n  <!-- 다중 선택 가능 여부 불명 -->\n</ul>",
+  "speechContext": "role=\"listbox\" aria-multiselectable=\"true\" 적용 시",
+  "speech": {
+    "jaws": "좋아하는 과일, 목록 상자, 다중 선택 가능",
+    "nvda": "좋아하는 과일, 목록 상자, 다중 선택",
+    "voiceover": "좋아하는 과일, 목록 상자",
+    "talkback": "좋아하는 과일, 목록"
+  },
+  "notes": "aria-selected와 함께 사용합니다.",
+  "supportNote": "unknown (no dedicated tests)"
+}

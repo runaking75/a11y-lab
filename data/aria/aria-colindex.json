@@ -1,0 +1,27 @@
+{
+  "id": "aria-colindex",
+  "nameKo": "열 인덱스 표시",
+  "type": "property",
+  "category": "relationship",
+  "description": "전체 열 중 현재 셀의 위치를 나타냅니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "partial",
+    "talkback": "none"
+  },
+  "wcagSC": [
+    "1.3.1"
+  ],
+  "goodCode": "<td aria-colindex=\"5\">\n  데이터\n</td>",
+  "badCode": "<td>\n  데이터\n  <!-- 전체 열 중 위치 불명 -->\n</td>",
+  "speechContext": "aria-colindex=\"5\" 적용 시",
+  "speech": {
+    "jaws": "5열, 데이터",
+    "nvda": "5열, 데이터",
+    "voiceover": "5열",
+    "talkback": "데이터"
+  },
+  "notes": "aria-colcount와 함께 사용합니다.",
+  "supportNote": "unknown (no dedicated tests)"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "aria-autocomplete",
+  "nameKo": "자동완성 유형 설정",
+  "type": "property",
+  "category": "widget",
+  "description": "텍스트 입력 시 자동완성 동작 방식을 설정합니다. inline, list, both, none 값을 가집니다.",
+  "screenReaderSupport": {
+    "jaws": "partial",
+    "nvda": "partial",
+    "voiceover": "partial",
+    "talkback": "partial"
+  },
+  "wcagSC": [
+    "4.1.2"
+  ],
+  "goodCode": "<input type=\"text\" role=\"combobox\"\n  aria-autocomplete=\"list\"\n  aria-expanded=\"false\"\n  aria-controls=\"suggestions\">",
+  "badCode": "<input type=\"text\" role=\"combobox\">\n<!-- 자동완성 유형 미표시 -->",
+  "speechContext": "role=\"combobox\"에 aria-autocomplete=\"list\" 적용 시",
+  "speech": {
+    "jaws": "검색, 편집, 콤보 자동 완성",
+    "nvda": "검색, 편집, 자동 완성 있는 콤보 상자",
+    "voiceover": "검색, 콤보 상자",
+    "talkback": "검색, 자동완성 콤보 상자"
+  },
+  "notes": "combobox나 textbox 역할에 주로 사용됩니다.",
+  "supportNote": "partial (11/55) - very poor"
+}

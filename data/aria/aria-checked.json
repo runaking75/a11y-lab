@@ -1,0 +1,27 @@
+{
+  "id": "aria-checked",
+  "nameKo": "선택 상태 표시",
+  "type": "state",
+  "category": "widget",
+  "description": "체크박스, 라디오 버튼 등의 현재 선택 상태를 나타냅니다. true, false, mixed 값을 가집니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "full",
+    "talkback": "full"
+  },
+  "wcagSC": [
+    "4.1.2"
+  ],
+  "goodCode": "<div role=\"checkbox\"\n  aria-checked=\"true\"\n  aria-label=\"이용약관 동의\"\n  tabindex=\"0\">\n  ✓ 이용약관 동의\n</div>",
+  "badCode": "<div role=\"checkbox\"\n  aria-label=\"이용약관 동의\"\n  tabindex=\"0\">\n  ✓ 이용약관 동의\n</div>\n<!-- aria-checked 없음 -->",
+  "speechContext": "role=\"checkbox\"에 aria-checked=\"true\" 적용 시",
+  "speech": {
+    "jaws": "이용약관 동의, 선택됨, 체크 상자",
+    "nvda": "이용약관 동의, 체크 상자, 선택됨",
+    "voiceover": "선택됨, 이용약관 동의, 체크 상자",
+    "talkback": "선택됨, 이용약관 동의, 확인란"
+  },
+  "notes": "switch 역할에서도 사용됩니다.",
+  "supportNote": "supported"
+}

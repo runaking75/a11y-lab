@@ -1,0 +1,27 @@
+{
+  "id": "aria-colcount",
+  "nameKo": "전체 열 수 표시",
+  "type": "property",
+  "category": "relationship",
+  "description": "테이블이나 그리드의 전체 열 수를 정의합니다. DOM에 일부 열만 있을 때 사용합니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "partial",
+    "talkback": "none"
+  },
+  "wcagSC": [
+    "1.3.1"
+  ],
+  "goodCode": "<table role=\"grid\"\n  aria-colcount=\"15\">\n  <tr>\n    <td aria-colindex=\"1\">...</td>\n    <td aria-colindex=\"5\">...</td>\n  </tr>\n</table>",
+  "badCode": "<table>\n  <!-- 15열 중 2열만 표시,\n       전체 수 미표시 -->\n</table>",
+  "speechContext": "aria-colcount=\"15\" 적용 시",
+  "speech": {
+    "jaws": "그리드, 15열",
+    "nvda": "그리드, 15열",
+    "voiceover": "표, 15열",
+    "talkback": "표"
+  },
+  "notes": "가상 스크롤 테이블에서 유용합니다.",
+  "supportNote": "unknown (no dedicated tests)"
+}

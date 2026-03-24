@@ -1,0 +1,27 @@
+{
+  "id": "aria-modal",
+  "nameKo": "모달 상태 표시",
+  "type": "property",
+  "category": "widget",
+  "description": "요소가 모달로 표시될 때 배경 콘텐츠에 접근할 수 없음을 나타냅니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "partial",
+    "talkback": "partial"
+  },
+  "wcagSC": [
+    "4.1.2"
+  ],
+  "goodCode": "<div role=\"dialog\"\n  aria-modal=\"true\"\n  aria-labelledby=\"title\">\n  <h2 id=\"title\">확인</h2>\n  ...\n</div>",
+  "badCode": "<div role=\"dialog\">\n  <!-- aria-modal 없이 배경 접근 가능 -->\n</div>",
+  "speechContext": "role=\"dialog\" aria-modal=\"true\" 적용 시",
+  "speech": {
+    "jaws": "확인 대화 상자 (배경 접근 차단)",
+    "nvda": "확인, 대화 상자 (가상 버퍼 제한)",
+    "voiceover": "확인, 대화상자 (부분적 차단)",
+    "talkback": "확인, 대화상자 (부분적 차단)"
+  },
+  "notes": "완전한 모달 동작을 위해 JS로 포커스 트랩도 구현해야 합니다.",
+  "supportNote": "partial - trapping incomplete"
+}

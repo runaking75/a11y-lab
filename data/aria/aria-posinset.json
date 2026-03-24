@@ -1,0 +1,27 @@
+{
+  "id": "aria-posinset",
+  "nameKo": "세트 내 위치 표시",
+  "type": "property",
+  "category": "relationship",
+  "description": "항목이 전체 세트에서 차지하는 위치를 나타냅니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "full",
+    "talkback": "partial"
+  },
+  "wcagSC": [
+    "1.3.1"
+  ],
+  "goodCode": "<div role=\"listbox\">\n  <div role=\"option\" aria-posinset=\"5\"\n    aria-setsize=\"100\">항목 5</div>\n</div>",
+  "badCode": "<div role=\"listbox\">\n  <div role=\"option\">항목 5</div>\n  <!-- 위치 정보 없음 -->\n</div>",
+  "speechContext": "aria-posinset=\"5\" aria-setsize=\"100\" 적용 시",
+  "speech": {
+    "jaws": "항목 5, 100개 중 5번째",
+    "nvda": "100개 중 5, 항목 5",
+    "voiceover": "항목 5, 5/100",
+    "talkback": "항목 5, 5/100"
+  },
+  "notes": "가상 스크롤 목록에서 유용합니다.",
+  "supportNote": "unknown (no dedicated tests)"
+}

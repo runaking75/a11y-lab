@@ -1,0 +1,27 @@
+{
+  "id": "aria-describedby",
+  "nameKo": "추가 설명 연결",
+  "type": "property",
+  "category": "relationship",
+  "description": "요소에 대한 추가 설명을 제공하는 다른 요소의 id를 참조합니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "full",
+    "talkback": "partial"
+  },
+  "wcagSC": [
+    "1.3.1"
+  ],
+  "goodCode": "<input type=\"password\" id=\"pw\"\n  aria-describedby=\"pw-help\">\n<span id=\"pw-help\">\n  8자 이상, 특수문자 포함\n</span>",
+  "badCode": "<input type=\"password\">\n<span class=\"help\">\n  8자 이상, 특수문자 포함\n</span>\n<!-- 입력 필드와 도움말 연결 없음 -->",
+  "speechContext": "input에 aria-describedby로 도움말 연결 시",
+  "speech": {
+    "jaws": "비밀번호, 편집, 8자 이상, 특수문자 포함",
+    "nvda": "비밀번호, 편집, 8자 이상, 특수문자 포함",
+    "voiceover": "비밀번호, 보안 텍스트 필드, 8자 이상, 특수문자 포함",
+    "talkback": "비밀번호, 수정 상자, 8자 이상, 특수문자 포함"
+  },
+  "notes": "이름(label) 이후에 추가로 읽히며, 약간의 지연이 있을 수 있습니다.",
+  "supportNote": "partial (20/22)"
+}

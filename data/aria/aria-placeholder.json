@@ -1,0 +1,27 @@
+{
+  "id": "aria-placeholder",
+  "nameKo": "힌트 텍스트 제공",
+  "type": "property",
+  "category": "widget",
+  "description": "입력 필드에 예상되는 값의 힌트를 제공합니다. 레이블을 대체할 수 없습니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "partial",
+    "voiceover": "partial",
+    "talkback": "partial"
+  },
+  "wcagSC": [
+    "3.3.2"
+  ],
+  "goodCode": "<label for=\"phone\">전화번호</label>\n<input type=\"tel\" id=\"phone\"\n  aria-placeholder=\"010-1234-5678\">",
+  "badCode": "<input type=\"tel\"\n  placeholder=\"전화번호\">\n<!-- placeholder만으로 레이블 대체 불가 -->",
+  "speechContext": "aria-placeholder 적용 시",
+  "speech": {
+    "jaws": "전화번호, 편집, 010-1234-5678",
+    "nvda": "전화번호, 편집",
+    "voiceover": "전화번호, 텍스트 필드",
+    "talkback": "전화번호, 수정 상자"
+  },
+  "notes": "HTML placeholder 속성이 있으면 aria-placeholder보다 우선합니다.",
+  "supportNote": "unknown (no dedicated tests)"
+}

@@ -7,6 +7,7 @@ var Quiz = {
   activeStandard: '',
   activeCategory: '',
   mode: 'setup',
+  wrongAnswers: [],
 
   standards: [
     { key: '', label: '전체' },
@@ -191,6 +192,7 @@ var Quiz = {
     this.currentQuestions = this.shuffle(filtered).slice(0, count);
     this.currentIndex = 0;
     this.score = 0;
+    this.wrongAnswers = [];
     this.mode = 'playing';
     this.renderQuestion();
   },
@@ -201,12 +203,19 @@ var Quiz = {
     var q = this.currentQuestions[this.currentIndex];
     this.answered = false;
 
-    var h = '<div class="qz-question">';
+    var curNum = this.currentIndex + 1;
+    var totalNum = this.currentQuestions.length;
+    var pct = Math.round(curNum / totalNum * 100);
+
+    var h = '<div class="qz-question qz-fadein">';
 
     h += '<h1 class="qz-page-title">WCAG / KWCAG 퀴즈</h1>';
 
-    var curNum = this.currentIndex + 1;
-    var totalNum = this.currentQuestions.length;
+    // 프로그레스 바
+    h += '<div class="qz-bar" role="progressbar" aria-valuenow="' + curNum + '" aria-valuemin="1" aria-valuemax="' + totalNum + '" aria-label="총 ' + totalNum + '개 중 ' + curNum + '번째 문제">' +
+      '<div class="qz-bar__fill" style="width:' + pct + '%"></div>' +
+    '</div>';
+
     h += '<div class="qz-progress" role="status" aria-label="총 ' + totalNum + '개 중 ' + curNum + '번째 문제, 정답 ' + this.score + '개">' +
       '<span class="qz-progress__current" aria-hidden="true">' + curNum + '</span>' +
       '<span class="qz-progress__total" aria-hidden="true"> / ' + totalNum + '</span>' +
@@ -248,6 +257,19 @@ var Quiz = {
     var q = this.currentQuestions[this.currentIndex];
     var correct = selected === q.answer;
     if (correct) this.score++;
+    if (!correct) {
+      this.wrongAnswers.push({
+        question: q.question,
+        standard: q.standard,
+        sc: q.sc,
+        scName: q.scName,
+        userAnswer: selected,
+        correctAnswer: q.answer,
+        explanation: q.explanation,
+        type: q.type,
+        choices: q.choices
+      });
+    }
 
     var buttons = document.querySelectorAll('.qz-choice');
     buttons.forEach(function(btn) {
@@ -262,7 +284,7 @@ var Quiz = {
 
     var feedback = document.getElementById('qz-feedback');
     var isLast = this.currentIndex >= this.currentQuestions.length - 1;
-    var nextLabel = isLast ? '결과 보기' : '다음 문제';
+    var nextLabel = isLast ? '결과 보기' : '다음 문제 →';
     var nextFn = isLast ? 'Quiz.showResult()' : 'Quiz.next()';
 
     feedback.innerHTML =
@@ -272,6 +294,7 @@ var Quiz = {
       '<p class="qz-feedback__explanation">' + q.explanation + '</p>' +
       '<button type="button" class="ch-reveal-btn" onclick="' + nextFn + '">' + nextLabel + '</button>';
     feedback.hidden = false;
+    feedback.classList.add('qz-fadein');
     feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   },
 
@@ -283,21 +306,56 @@ var Quiz = {
   showResult: function() {
     var main = document.getElementById('qz-main');
     if (!main) return;
+    var self = this;
     var total = this.currentQuestions.length;
     var pct = Math.round(this.score / total * 100);
 
-    var h = '<div class="qz-result">' +
+    var h = '<div class="qz-result qz-fadein">' +
       '<h1 class="qz-result__title">퀴즈 결과</h1>' +
+
+      // 프로그레스 바 100%
+      '<div class="qz-bar qz-bar--result">' +
+        '<div class="qz-bar__fill qz-bar__fill--result" style="width:' + pct + '%"></div>' +
+      '</div>' +
+
       '<div class="qz-result__score" role="status" aria-label="총 ' + total + '개 중 ' + this.score + '문제 맞춤, ' + pct + '%">' +
         '<span class="qz-result__num" aria-hidden="true">' + this.score + '</span>' +
         '<span class="qz-result__total" aria-hidden="true"> / ' + total + '</span>' +
       '</div>' +
       '<div class="qz-result__pct" aria-hidden="true">' + pct + '%</div>' +
-      '<div class="qz-result__msg">' + this.getMsg(pct) + '</div>' +
-      '<div class="qz-result__actions">' +
-        '<button type="button" class="ch-reveal-btn" onclick="Quiz.start()">다시 풀기</button>' +
-        '<button type="button" class="ch-hint-btn" onclick="Quiz.renderSetup()">설정으로</button>' +
-      '</div>' +
+      '<div class="qz-result__msg">' + this.getMsg(pct) + '</div>';
+
+    // 오답 복습
+    if (this.wrongAnswers.length > 0) {
+      h += '<div class="qz-review">' +
+        '<h2 class="qz-review__title">틀린 문제 복습 (' + this.wrongAnswers.length + '문제)</h2>';
+
+      this.wrongAnswers.forEach(function(w, i) {
+        var correctText = '';
+        if (w.type === 'ox') {
+          correctText = w.correctAnswer ? 'O 맞다' : 'X 틀리다';
+        } else if (w.choices) {
+          correctText = (w.correctAnswer + 1) + '. ' + self._esc(w.choices[w.correctAnswer]);
+        }
+
+        h += '<div class="qz-review__item">' +
+          '<div class="qz-review__header">' +
+            '<span class="qz-review__num">' + (i + 1) + '</span>' +
+            '<span class="qz-review__sc">' + w.standard + ' ' + w.sc + '</span>' +
+          '</div>' +
+          '<p class="qz-review__question">' + self._esc(w.question) + '</p>' +
+          '<div class="qz-review__answer">정답: ' + correctText + '</div>' +
+          '<p class="qz-review__explanation">' + w.explanation + '</p>' +
+        '</div>';
+      });
+
+      h += '</div>';
+    }
+
+    h += '<div class="qz-result__actions">' +
+      '<button type="button" class="ch-reveal-btn" onclick="Quiz.start()">다시 풀기</button>' +
+      '<button type="button" class="ch-hint-btn" onclick="Quiz.renderSetup()">설정으로</button>' +
+    '</div>' +
     '</div>';
 
     main.innerHTML = h;

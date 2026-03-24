@@ -1,0 +1,27 @@
+{
+  "id": "aria-pressed",
+  "nameKo": "토글 버튼 상태",
+  "type": "state",
+  "category": "widget",
+  "description": "토글 버튼의 현재 눌림 상태를 나타냅니다. true, false, mixed 값을 가집니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "full",
+    "talkback": "full"
+  },
+  "wcagSC": [
+    "4.1.2"
+  ],
+  "goodCode": "<button aria-pressed=\"true\">\n  굵게\n</button>",
+  "badCode": "<button class=\"active\">\n  굵게\n</button>\n<!-- CSS만으로 상태 표시 -->",
+  "speechContext": "button에 aria-pressed=\"true\" 적용 시",
+  "speech": {
+    "jaws": "굵게, 토글 버튼, 눌림",
+    "nvda": "굵게, 토글 버튼, 눌림",
+    "voiceover": "굵게, 선택됨, 토글 버튼",
+    "talkback": "굵게, 눌림, 토글 버튼"
+  },
+  "notes": "aria-checked와 혼동하지 마세요. pressed는 토글 버튼에, checked는 체크박스에 사용합니다.",
+  "supportNote": "supported - partial results are old"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "aria-busy",
+  "nameKo": "업데이트 진행 중 표시",
+  "type": "state",
+  "category": "liveRegion",
+  "description": "요소가 현재 업데이트 중이라 아직 최종 상태가 아님을 나타냅니다.",
+  "screenReaderSupport": {
+    "jaws": "partial",
+    "nvda": "partial",
+    "voiceover": "none",
+    "talkback": "none"
+  },
+  "wcagSC": [
+    "4.1.3"
+  ],
+  "goodCode": "<div aria-live=\"polite\"\n  aria-busy=\"true\">\n  <!-- 콘텐츠 로딩 중 -->\n</div>\n<!-- 로딩 완료 후 aria-busy=\"false\" -->",
+  "badCode": "<div aria-live=\"polite\">\n  <!-- 중간 상태도 계속 읽힘 -->\n</div>",
+  "speechContext": "aria-busy=\"true\" 동안",
+  "speech": {
+    "jaws": "(busy 동안 변경 알림 보류)",
+    "nvda": "(busy 동안 변경 알림 보류, 일부 버전)",
+    "voiceover": "(일부 상황에서만 동작)",
+    "talkback": "(지원 미확인)"
+  },
+  "notes": "라이브 영역에서 여러 요소가 동시에 변경될 때 유용합니다.",
+  "supportNote": "partial - limited"
+}

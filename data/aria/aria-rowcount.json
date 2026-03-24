@@ -1,0 +1,27 @@
+{
+  "id": "aria-rowcount",
+  "nameKo": "전체 행 수 표시",
+  "type": "property",
+  "category": "relationship",
+  "description": "테이블이나 그리드의 전체 행 수를 정의합니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "partial",
+    "talkback": "none"
+  },
+  "wcagSC": [
+    "1.3.1"
+  ],
+  "goodCode": "<table aria-rowcount=\"500\">\n  <tr aria-rowindex=\"1\">...</tr>\n  <tr aria-rowindex=\"2\">...</tr>\n</table>",
+  "badCode": "<table>\n  <!-- 500행 중 일부만 표시 -->\n</table>",
+  "speechContext": "aria-rowcount=\"500\" 적용 시",
+  "speech": {
+    "jaws": "표, 500행",
+    "nvda": "표, 500행",
+    "voiceover": "표, 500행",
+    "talkback": "표"
+  },
+  "notes": "aria-rowindex와 함께 사용합니다.",
+  "supportNote": "unknown (no dedicated tests)"
+}

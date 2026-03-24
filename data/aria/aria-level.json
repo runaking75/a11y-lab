@@ -1,0 +1,27 @@
+{
+  "id": "aria-level",
+  "nameKo": "계층 레벨 설정",
+  "type": "property",
+  "category": "widget",
+  "description": "구조 내에서 요소의 계층 레벨을 정의합니다. heading, treeitem 등에 사용됩니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "full",
+    "talkback": "full"
+  },
+  "wcagSC": [
+    "1.3.1"
+  ],
+  "goodCode": "<div role=\"heading\" aria-level=\"2\">\n  섹션 제목\n</div>",
+  "badCode": "<div class=\"heading-2\">\n  섹션 제목\n</div>\n<!-- 시맨틱 없음, h2 사용 권장 -->",
+  "speechContext": "role=\"heading\" aria-level=\"2\" 적용 시",
+  "speech": {
+    "jaws": "섹션 제목, 제목 레벨 2",
+    "nvda": "제목 레벨 2, 섹션 제목",
+    "voiceover": "제목 레벨 2, 섹션 제목",
+    "talkback": "제목, 섹션 제목, 레벨 2"
+  },
+  "notes": "가능하면 네이티브 h1~h6 사용을 권장합니다.",
+  "supportNote": "supported on heading tests"
+}

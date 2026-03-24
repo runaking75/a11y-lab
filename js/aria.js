@@ -330,21 +330,15 @@ var Dict = {
       h += '<a href="#group/' + group.id + '" class="al-badge al-badge--group" style="background:' + gc.bg + ';color:' + gc.text + '">' + group.title + ' 비교 →</a>';
     }
     h += '</div>';
-    h += '<p class="al-detail-desc">' + item.descriptionKo + '</p>';
-
-    h += '<div class="dict-section"><h2 class="al-section-title">속성 정보</h2><div class="dict-meta">' +
-      this._meta('값 유형', item.valueType) + this._meta('기본값', item.defaultValue) +
-      this._meta('적용 대상', item.applicableTo.join(', ')) +
-      this._meta('관련 속성', item.relatedAttrs.map(function(a) { return '<code>' + a + '</code>'; }).join(' ')) +
-    '</div></div>';
+    h += '<p class="al-detail-desc">' + item.description + '</p>';
 
     h += '<div class="dict-section"><h2 class="al-section-title">코드 예시</h2><div class="code-pair">' +
-      this._code('good', item.codeExamples.good) + this._code('bad', item.codeExamples.bad) + '</div></div>';
+      this._code('good', item.goodCode) + this._code('bad', item.badCode) + '</div></div>';
 
-    var sp = item.screenReaderSpeech;
-    var sr = item.screenReaderSupport;
+    var sp = item.speech || {};
+    var sr = item.screenReaderSupport || {};
     h += '<div class="dict-section"><h2 class="al-section-title">스크린리더 발화</h2>' +
-      '<div class="speech-context">' + sp.context + '</div><div class="speech-grid">' +
+      '<div class="speech-context">' + (item.speechContext || '') + '</div><div class="speech-grid">' +
       this._speech('JAWS', env.jaws, sp.jaws) + this._speech('NVDA', env.nvda, sp.nvda) +
       this._speech('VoiceOver', env.voiceover, sp.voiceover) + this._speech('TalkBack', env.talkback, sp.talkback) +
     '</div></div>';
@@ -362,10 +356,18 @@ var Dict = {
         return '<a class="sc-tag" href="' + url + '" target="_blank">' + scId + ' ' + sc.name + ' (' + sc.level + ')</a>';
       }).join('') + '</div></div>';
 
+    // 노트 + 스펙 링크
+    h += '<div class="dict-section dict-section--flush">';
     if (item.notes) {
-      h += '<div class="dict-section dict-section--flush"><p class="dict-note">' + item.notes + '</p>' +
-        '<a class="dict-spec-link" href="' + cfg.specBaseUrl + item.id + '" target="_blank">WAI-ARIA 1.2 스펙 보기 ↗</a></div>';
+      h += '<p class="dict-note">' + item.notes + '</p>';
     }
+    h += '<a class="dict-spec-link" href="' + cfg.specBaseUrl + item.id + '" target="_blank">WAI-ARIA 1.2 스펙 보기 ↗</a>';
+
+    // 출처
+    if (cfg.supportSource) {
+      h += '<p class="dict-source">스크린리더 지원 데이터 출처: <a href="' + cfg.supportSource.url + '" target="_blank">' + cfg.supportSource.name + '</a> — ' + cfg.supportSource.note + '</p>';
+    }
+    h += '</div>';
 
     h += '<div class="dict-nav">';
     h += prev ? '<a href="#' + prev.id + '">← ' + prev.id + '</a>' : '<span></span>';
@@ -379,14 +381,15 @@ var Dict = {
   _meta: function(k, v) {
     return '<div class="dict-meta__row"><span class="dict-meta__key">' + k + '</span><span class="dict-meta__val">' + v + '</span></div>';
   },
-  _code: function(type, ex) {
+  _code: function(type, codeStr) {
     var cls = type === 'good' ? 'code-block__head--good' : 'code-block__head--bad';
     var hlCls = type === 'good' ? 'hl-good' : 'hl-bad';
-    var code = ex.html.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    var raw = typeof codeStr === 'object' ? codeStr.html : codeStr;
+    var code = raw.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
     code = code.replace(/(aria-[\w-]+="[^"]*")/g, '<span class="' + hlCls + '">$1</span>');
     if (type === 'good') code = code.replace(/(id="[^"]*")/g, '<span class="hl-good">$1</span>');
     return '<div class="code-block"><div class="code-block__head ' + cls + '">' + (type === 'good' ? 'Good' : 'Bad') + '</div>' +
-      '<div class="code-block__body">' + code + '</div><div class="code-block__note">' + ex.description + '</div></div>';
+      '<div class="code-block__body">' + code + '</div></div>';
   },
   _speech: function(name, ver, text) {
     return '<div class="speech-card"><div class="speech-card__label">' + name + ' ' + ver + '</div><div class="speech-card__text">' + text + '</div></div>';

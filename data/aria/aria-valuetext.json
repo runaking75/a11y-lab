@@ -1,0 +1,27 @@
+{
+  "id": "aria-valuetext",
+  "nameKo": "현재 값 텍스트 설정",
+  "type": "property",
+  "category": "widget",
+  "description": "범위 위젯의 현재 값을 사람이 읽을 수 있는 텍스트로 제공합니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "full",
+    "talkback": "partial"
+  },
+  "wcagSC": [
+    "4.1.2"
+  ],
+  "goodCode": "<div role=\"slider\"\n  aria-valuemin=\"1\"\n  aria-valuemax=\"7\"\n  aria-valuenow=\"3\"\n  aria-valuetext=\"수요일\"\n  tabindex=\"0\">",
+  "badCode": "<div role=\"slider\"\n  aria-valuenow=\"3\">\n  <!-- 3이 무엇을 의미하는지 불명 -->\n</div>",
+  "speechContext": "aria-valuetext=\"수요일\" 적용 시",
+  "speech": {
+    "jaws": "슬라이더, 수요일",
+    "nvda": "슬라이더, 수요일",
+    "voiceover": "수요일, 슬라이더",
+    "talkback": "수요일, 슬라이더"
+  },
+  "notes": "aria-valuenow의 숫자 대신 의미 있는 텍스트를 읽어줍니다.",
+  "supportNote": "unknown (no tests)"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "aria-orientation",
+  "nameKo": "방향 설정",
+  "type": "property",
+  "category": "widget",
+  "description": "슬라이더, 스크롤바, 구분선 등의 방향을 horizontal 또는 vertical로 설정합니다.",
+  "screenReaderSupport": {
+    "jaws": "partial",
+    "nvda": "partial",
+    "voiceover": "partial",
+    "talkback": "partial"
+  },
+  "wcagSC": [
+    "4.1.2"
+  ],
+  "goodCode": "<div role=\"slider\"\n  aria-orientation=\"horizontal\"\n  aria-valuemin=\"0\"\n  aria-valuemax=\"100\"\n  aria-valuenow=\"50\"\n  tabindex=\"0\">\n</div>",
+  "badCode": "<div role=\"slider\"\n  tabindex=\"0\">\n  <!-- 방향 미설정 -->\n</div>",
+  "speechContext": "role=\"slider\" aria-orientation=\"vertical\" 적용 시",
+  "speech": {
+    "jaws": "슬라이더, 50, 0~100",
+    "nvda": "슬라이더, 50",
+    "voiceover": "50, 슬라이더",
+    "talkback": "슬라이더, 50"
+  },
+  "notes": "대부분의 스크린리더는 방향을 직접 읽지 않지만 키보드 탐색 방향에 영향을 줍니다.",
+  "supportNote": "unknown - affects keyboard, not directly announced"
+}

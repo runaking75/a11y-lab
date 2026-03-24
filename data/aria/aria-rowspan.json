@@ -1,0 +1,27 @@
+{
+  "id": "aria-rowspan",
+  "nameKo": "행 병합 수 설정",
+  "type": "property",
+  "category": "relationship",
+  "description": "셀이 차지하는 행 수를 정의합니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "partial",
+    "talkback": "none"
+  },
+  "wcagSC": [
+    "1.3.1"
+  ],
+  "goodCode": "<div role=\"cell\"\n  aria-rowspan=\"2\">\n  병합된 셀\n</div>",
+  "badCode": "<div role=\"cell\">\n  <!-- 병합 범위 미표시 -->\n</div>",
+  "speechContext": "aria-rowspan=\"2\" 적용 시",
+  "speech": {
+    "jaws": "병합된 셀, 2행에 걸쳐 있음",
+    "nvda": "병합된 셀, 2행 합쳐짐",
+    "voiceover": "병합된 셀",
+    "talkback": "병합된 셀"
+  },
+  "notes": "네이티브 table에서는 HTML rowspan을 사용하세요.",
+  "supportNote": "unknown (no dedicated tests)"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "aria-rowindex",
+  "nameKo": "행 인덱스 표시",
+  "type": "property",
+  "category": "relationship",
+  "description": "전체 행 중 현재 행의 위치를 나타냅니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "partial",
+    "talkback": "none"
+  },
+  "wcagSC": [
+    "1.3.1"
+  ],
+  "goodCode": "<tr aria-rowindex=\"15\">\n  <td>데이터</td>\n</tr>",
+  "badCode": "<tr>\n  <td>데이터</td>\n  <!-- 전체 행 중 위치 불명 -->\n</tr>",
+  "speechContext": "aria-rowindex=\"15\" 적용 시",
+  "speech": {
+    "jaws": "15행",
+    "nvda": "15행",
+    "voiceover": "15행",
+    "talkback": "데이터"
+  },
+  "notes": "aria-rowcount와 함께 사용합니다.",
+  "supportNote": "unknown (no dedicated tests)"
+}

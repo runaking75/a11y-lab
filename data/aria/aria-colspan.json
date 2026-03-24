@@ -1,0 +1,27 @@
+{
+  "id": "aria-colspan",
+  "nameKo": "열 병합 수 설정",
+  "type": "property",
+  "category": "relationship",
+  "description": "셀이 차지하는 열 수를 정의합니다. HTML colspan과 유사합니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "partial",
+    "talkback": "none"
+  },
+  "wcagSC": [
+    "1.3.1"
+  ],
+  "goodCode": "<div role=\"cell\"\n  aria-colspan=\"3\">\n  병합된 셀\n</div>",
+  "badCode": "<div role=\"cell\">\n  <!-- 병합 범위 미표시 -->\n</div>",
+  "speechContext": "aria-colspan=\"3\" 적용 시",
+  "speech": {
+    "jaws": "병합된 셀, 3열에 걸쳐 있음",
+    "nvda": "병합된 셀, 3열 합쳐짐",
+    "voiceover": "병합된 셀",
+    "talkback": "병합된 셀"
+  },
+  "notes": "role=\"cell\" 또는 role=\"gridcell\"에서 사용합니다. 네이티브 table에서는 HTML colspan을 사용하세요.",
+  "supportNote": "unknown (no dedicated tests)"
+}

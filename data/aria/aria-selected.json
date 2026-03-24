@@ -1,39 +1,27 @@
 {
   "id": "aria-selected",
+  "nameKo": "선택 상태 표시",
   "type": "state",
   "category": "widget",
-  "nameKo": "선택 상태 표시",
-  "descriptionKo": "탭, 리스트박스 옵션, 그리드 셀 등의 선택 상태를 나타냅니다.",
-  "valueType": "true | false | undefined",
-  "allowedValues": "true(선택됨), false(선택 안 됨), undefined(선택 불가)",
-  "defaultValue": "undefined",
-  "applicableTo": ["tab", "option", "gridcell", "row", "treeitem"],
-  "relatedAttrs": ["aria-checked", "aria-current", "aria-pressed"],
-  "codeExamples": {
-    "good": {
-      "title": "탭 인터페이스 선택 상태",
-      "html": "<div role=\"tablist\">\n  <button role=\"tab\"\n          aria-selected=\"true\">탭 1</button>\n  <button role=\"tab\"\n          aria-selected=\"false\">탭 2</button>\n</div>",
-      "description": "선택된 탭에 aria-selected=\"true\", 나머지는 false로 명확히 구분합니다."
-    },
-    "bad": {
-      "title": "aria-selected 없이 시각적으로만 구분",
-      "html": "<div role=\"tablist\">\n  <button role=\"tab\" class=\"active\">탭 1</button>\n  <button role=\"tab\">탭 2</button>\n</div>",
-      "description": "CSS 클래스만으로 선택 상태를 표시하면 스크린리더가 어떤 탭이 선택되었는지 알 수 없습니다."
-    }
-  },
+  "description": "탭, 옵션, 행 등의 현재 선택 상태를 나타냅니다.",
   "screenReaderSupport": {
     "jaws": "full",
     "nvda": "full",
     "voiceover": "full",
-    "talkback": "full"
+    "talkback": "partial"
   },
-  "screenReaderSpeech": {
-    "context": "role=\"tab\" aria-selected=\"true\" 포커스 시",
-    "jaws": "\"탭 1 탭 선택됨 1/2\"",
-    "nvda": "\"탭 1 탭 선택됨 1/2\"",
-    "voiceover": "\"탭 1, 선택됨, 탭, 1/2\"",
-    "talkback": "\"탭 1, 선택됨, 탭, 1/2\""
+  "wcagSC": [
+    "4.1.2"
+  ],
+  "goodCode": "<div role=\"tablist\">\n  <button role=\"tab\"\n    aria-selected=\"true\">\n    개요\n  </button>\n  <button role=\"tab\"\n    aria-selected=\"false\">\n    스펙\n  </button>\n</div>",
+  "badCode": "<div class=\"tabs\">\n  <div class=\"tab active\">개요</div>\n  <div class=\"tab\">스펙</div>\n</div>\n<!-- 선택 상태 미표시 -->",
+  "speechContext": "role=\"tab\"에 aria-selected=\"true\" 적용 시",
+  "speech": {
+    "jaws": "개요, 탭, 선택됨",
+    "nvda": "개요, 탭, 선택됨",
+    "voiceover": "개요, 선택됨, 탭",
+    "talkback": "개요, 선택됨, 탭"
   },
-  "wcagSC": ["4.1.2"],
-  "notes": "aria-selected와 aria-checked를 혼동하지 마세요. aria-selected는 탭/리스트 선택, aria-checked는 체크박스/라디오 체크 상태입니다."
+  "notes": "tab, option, row, gridcell 등에 사용됩니다.",
+  "supportNote": "partial - TalkBack partial on some roles"
 }

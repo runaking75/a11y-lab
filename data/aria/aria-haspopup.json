@@ -1,0 +1,27 @@
+{
+  "id": "aria-haspopup",
+  "nameKo": "팝업 존재 표시",
+  "type": "property",
+  "category": "widget",
+  "description": "요소에 팝업(메뉴, 리스트박스, 트리, 그리드, 다이얼로그)이 있음을 나타냅니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "partial",
+    "talkback": "partial"
+  },
+  "wcagSC": [
+    "4.1.2"
+  ],
+  "goodCode": "<button aria-haspopup=\"menu\"\n  aria-expanded=\"false\">\n  옵션\n</button>",
+  "badCode": "<button onclick=\"showMenu()\">\n  옵션\n</button>\n<!-- 팝업 존재 미표시 -->",
+  "speechContext": "button에 aria-haspopup=\"menu\" 적용 시",
+  "speech": {
+    "jaws": "옵션, 메뉴 버튼",
+    "nvda": "옵션, 하위 메뉴, 버튼",
+    "voiceover": "옵션, 팝업 버튼",
+    "talkback": "옵션, 팝업 버튼"
+  },
+  "notes": "true는 menu와 동일합니다.",
+  "supportNote": "ARIA 1.0 values OK, new values (dialog,grid,listbox,tree) NOT"
+}

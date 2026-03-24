@@ -1,0 +1,27 @@
+{
+  "id": "aria-activedescendant",
+  "nameKo": "활성 자식 요소 지정",
+  "type": "property",
+  "category": "relationship",
+  "description": "컨테이너 요소가 포커스를 유지하면서 자식 요소 중 활성 항목을 변경할 때 사용합니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "full",
+    "talkback": "partial"
+  },
+  "wcagSC": [
+    "4.1.2"
+  ],
+  "goodCode": "<div role=\"listbox\" tabindex=\"0\"\n  aria-activedescendant=\"opt-2\">\n  <div role=\"option\" id=\"opt-1\">사과</div>\n  <div role=\"option\" id=\"opt-2\">바나나</div>\n</div>",
+  "badCode": "<div role=\"listbox\">\n  <!-- 어떤 항목이 활성인지 불명 -->\n</div>",
+  "speechContext": "aria-activedescendant로 옵션 변경 시",
+  "speech": {
+    "jaws": "바나나",
+    "nvda": "바나나",
+    "voiceover": "바나나",
+    "talkback": "바나나"
+  },
+  "notes": "listbox, tree, grid 등에서 가상 포커스를 관리할 때 사용합니다.",
+  "supportNote": "partial (33/38)"
+}

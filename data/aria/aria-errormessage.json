@@ -1,0 +1,27 @@
+{
+  "id": "aria-errormessage",
+  "nameKo": "에러 메시지 연결",
+  "type": "property",
+  "category": "widget",
+  "description": "유효성 에러 메시지가 있는 요소의 id를 참조하여 에러와 입력 필드를 연결합니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "partial",
+    "talkback": "partial"
+  },
+  "wcagSC": [
+    "3.3.1"
+  ],
+  "goodCode": "<input type=\"email\" id=\"email\"\n  aria-invalid=\"true\"\n  aria-errormessage=\"email-error\">\n<span id=\"email-error\">\n  올바른 이메일 형식이 아닙니다.\n</span>",
+  "badCode": "<input type=\"email\">\n<span class=\"error\">\n  올바른 이메일 형식이 아닙니다.\n</span>\n<!-- 에러와 입력 필드 연결 없음 -->",
+  "speechContext": "aria-invalid=\"true\"와 함께 사용 시",
+  "speech": {
+    "jaws": "이메일, 편집, 잘못됨, 올바른 이메일 형식이 아닙니다",
+    "nvda": "이메일, 편집, 잘못됨, 올바른 이메일 형식이 아닙니다",
+    "voiceover": "이메일, 텍스트 필드, 잘못됨",
+    "talkback": "이메일, 잘못됨, 수정 상자"
+  },
+  "notes": "aria-invalid=\"true\"일 때만 에러 메시지를 전달합니다.",
+  "supportNote": "partial - VO/TB lagging"
+}

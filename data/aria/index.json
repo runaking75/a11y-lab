@@ -1,5 +1,101 @@
 [
   {
+    "id": "aria-autocomplete",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "자동완성 유형 설정",
+    "support": {
+      "jaws": "partial",
+      "nvda": "partial",
+      "voiceover": "partial",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-checked",
+    "type": "state",
+    "category": "widget",
+    "nameKo": "선택 상태 표시",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "full",
+      "talkback": "full"
+    }
+  },
+  {
+    "id": "aria-disabled",
+    "type": "state",
+    "category": "widget",
+    "nameKo": "비활성 상태 표시",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "full",
+      "talkback": "full"
+    }
+  },
+  {
+    "id": "aria-errormessage",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "에러 메시지 연결",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "partial",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-expanded",
+    "type": "state",
+    "category": "widget",
+    "nameKo": "펼침/접힘 상태",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "partial",
+      "talkback": "full"
+    }
+  },
+  {
+    "id": "aria-haspopup",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "팝업 존재 표시",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "partial",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-hidden",
+    "type": "state",
+    "category": "widget",
+    "nameKo": "보조기술에서 숨김",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "full",
+      "talkback": "full"
+    }
+  },
+  {
+    "id": "aria-invalid",
+    "type": "state",
+    "category": "widget",
+    "nameKo": "유효하지 않은 값 표시",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "full",
+      "talkback": "partial"
+    }
+  },
+  {
     "id": "aria-label",
     "type": "property",
     "category": "widget",
@@ -24,22 +120,10 @@
     }
   },
   {
-    "id": "aria-expanded",
-    "type": "state",
+    "id": "aria-level",
+    "type": "property",
     "category": "widget",
-    "nameKo": "펼침/접힘 상태",
-    "support": {
-      "jaws": "full",
-      "nvda": "full",
-      "voiceover": "full",
-      "talkback": "full"
-    }
-  },
-  {
-    "id": "aria-hidden",
-    "type": "state",
-    "category": "widget",
-    "nameKo": "보조기술에서 숨김",
+    "nameKo": "계층 레벨 설정",
     "support": {
       "jaws": "full",
       "nvda": "full",
@@ -53,9 +137,93 @@
     "category": "liveRegion",
     "nameKo": "실시간 영역 알림 설정",
     "support": {
+      "jaws": "partial",
+      "nvda": "full",
+      "voiceover": "partial",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-modal",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "모달 상태 표시",
+    "support": {
       "jaws": "full",
       "nvda": "full",
       "voiceover": "partial",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-multiselectable",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "다중 선택 가능 표시",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "partial",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-orientation",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "방향 설정",
+    "support": {
+      "jaws": "partial",
+      "nvda": "partial",
+      "voiceover": "partial",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-placeholder",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "힌트 텍스트 제공",
+    "support": {
+      "jaws": "full",
+      "nvda": "partial",
+      "voiceover": "partial",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-pressed",
+    "type": "state",
+    "category": "widget",
+    "nameKo": "토글 버튼 상태",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "full",
+      "talkback": "full"
+    }
+  },
+  {
+    "id": "aria-readonly",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "읽기 전용 표시",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "partial",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-required",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "필수 입력 표시",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "full",
       "talkback": "full"
     }
   },
@@ -68,7 +236,319 @@
       "jaws": "full",
       "nvda": "full",
       "voiceover": "full",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-sort",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "정렬 방향 표시",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "partial",
+      "talkback": "none"
+    }
+  },
+  {
+    "id": "aria-valuemax",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "최댓값 설정",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "full",
       "talkback": "full"
+    }
+  },
+  {
+    "id": "aria-valuemin",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "최솟값 설정",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "full",
+      "talkback": "full"
+    }
+  },
+  {
+    "id": "aria-valuenow",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "현재 값 설정",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "full",
+      "talkback": "full"
+    }
+  },
+  {
+    "id": "aria-valuetext",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "현재 값 텍스트 설정",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "full",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-atomic",
+    "type": "property",
+    "category": "liveRegion",
+    "nameKo": "전체 영역 알림 여부",
+    "support": {
+      "jaws": "partial",
+      "nvda": "partial",
+      "voiceover": "partial",
+      "talkback": "none"
+    }
+  },
+  {
+    "id": "aria-busy",
+    "type": "state",
+    "category": "liveRegion",
+    "nameKo": "업데이트 진행 중 표시",
+    "support": {
+      "jaws": "partial",
+      "nvda": "partial",
+      "voiceover": "none",
+      "talkback": "none"
+    }
+  },
+  {
+    "id": "aria-relevant",
+    "type": "property",
+    "category": "liveRegion",
+    "nameKo": "알림 대상 변경 유형",
+    "support": {
+      "jaws": "partial",
+      "nvda": "partial",
+      "voiceover": "none",
+      "talkback": "none"
+    }
+  },
+  {
+    "id": "aria-activedescendant",
+    "type": "property",
+    "category": "relationship",
+    "nameKo": "활성 자식 요소 지정",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "full",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-controls",
+    "type": "property",
+    "category": "relationship",
+    "nameKo": "제어 대상 연결",
+    "support": {
+      "jaws": "partial",
+      "nvda": "partial",
+      "voiceover": "none",
+      "talkback": "none"
+    }
+  },
+  {
+    "id": "aria-describedby",
+    "type": "property",
+    "category": "relationship",
+    "nameKo": "추가 설명 연결",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "full",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-details",
+    "type": "property",
+    "category": "relationship",
+    "nameKo": "상세 설명 연결",
+    "support": {
+      "jaws": "partial",
+      "nvda": "partial",
+      "voiceover": "none",
+      "talkback": "none"
+    }
+  },
+  {
+    "id": "aria-flowto",
+    "type": "property",
+    "category": "relationship",
+    "nameKo": "읽기 순서 변경",
+    "support": {
+      "jaws": "partial",
+      "nvda": "none",
+      "voiceover": "none",
+      "talkback": "none"
+    }
+  },
+  {
+    "id": "aria-owns",
+    "type": "property",
+    "category": "relationship",
+    "nameKo": "소유 관계 설정",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "full",
+      "talkback": "full"
+    }
+  },
+  {
+    "id": "aria-current",
+    "type": "state",
+    "category": "widget",
+    "nameKo": "현재 항목 표시",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "partial",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-description",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "접근 가능한 설명 제공",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "partial",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-roledescription",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "역할 설명 재정의",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "partial",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-colcount",
+    "type": "property",
+    "category": "relationship",
+    "nameKo": "전체 열 수 표시",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "partial",
+      "talkback": "none"
+    }
+  },
+  {
+    "id": "aria-colindex",
+    "type": "property",
+    "category": "relationship",
+    "nameKo": "열 인덱스 표시",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "partial",
+      "talkback": "none"
+    }
+  },
+  {
+    "id": "aria-colspan",
+    "type": "property",
+    "category": "relationship",
+    "nameKo": "열 병합 수 설정",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "partial",
+      "talkback": "none"
+    }
+  },
+  {
+    "id": "aria-posinset",
+    "type": "property",
+    "category": "relationship",
+    "nameKo": "세트 내 위치 표시",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "full",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-rowcount",
+    "type": "property",
+    "category": "relationship",
+    "nameKo": "전체 행 수 표시",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "partial",
+      "talkback": "none"
+    }
+  },
+  {
+    "id": "aria-rowindex",
+    "type": "property",
+    "category": "relationship",
+    "nameKo": "행 인덱스 표시",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "partial",
+      "talkback": "none"
+    }
+  },
+  {
+    "id": "aria-rowspan",
+    "type": "property",
+    "category": "relationship",
+    "nameKo": "행 병합 수 설정",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "partial",
+      "talkback": "none"
+    }
+  },
+  {
+    "id": "aria-setsize",
+    "type": "property",
+    "category": "relationship",
+    "nameKo": "세트 전체 크기 표시",
+    "support": {
+      "jaws": "full",
+      "nvda": "full",
+      "voiceover": "full",
+      "talkback": "partial"
+    }
+  },
+  {
+    "id": "aria-keyshortcuts",
+    "type": "property",
+    "category": "widget",
+    "nameKo": "키보드 단축키 표시",
+    "support": {
+      "jaws": "partial",
+      "nvda": "none",
+      "voiceover": "none",
+      "talkback": "none"
     }
   }
 ]

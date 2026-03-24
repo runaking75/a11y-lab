@@ -8,19 +8,48 @@
     "talkback": "15.1 / Android 15 / Chrome"
   },
   "wcagSC": {
-    "1.1.1": { "name": "Non-text Content", "level": "A" },
-    "1.3.1": { "name": "Info and Relationships", "level": "A" },
-    "2.1.1": { "name": "Keyboard", "level": "A" },
-    "2.4.6": { "name": "Headings and Labels", "level": "AA" },
-    "3.3.1": { "name": "Error Identification", "level": "A" },
-    "3.3.2": { "name": "Labels or Instructions", "level": "A" },
-    "4.1.2": { "name": "Name, Role, Value", "level": "A" },
-    "4.1.3": { "name": "Status Messages", "level": "AA" }
+    "1.1.1": {
+      "name": "Non-text Content",
+      "level": "A"
+    },
+    "1.3.1": {
+      "name": "Info and Relationships",
+      "level": "A"
+    },
+    "2.1.1": {
+      "name": "Keyboard",
+      "level": "A"
+    },
+    "2.4.6": {
+      "name": "Headings and Labels",
+      "level": "AA"
+    },
+    "3.3.1": {
+      "name": "Error Identification",
+      "level": "A"
+    },
+    "3.3.2": {
+      "name": "Labels or Instructions",
+      "level": "A"
+    },
+    "4.1.2": {
+      "name": "Name, Role, Value",
+      "level": "A"
+    },
+    "4.1.3": {
+      "name": "Status Messages",
+      "level": "AA"
+    }
   },
   "categories": {
     "widget": "Widget 속성",
     "liveRegion": "Live Region",
     "relationship": "관계 속성",
     "dragDrop": "D&D"
+  },
+  "supportSource": {
+    "name": "a11ysupport.io",
+    "url": "https://a11ysupport.io",
+    "note": "커뮤니티 테스트 기반 데이터입니다. 실제 환경과 다를 수 있으며, 직접 테스트를 권장합니다."
   }
 }

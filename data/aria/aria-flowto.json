@@ -1,0 +1,27 @@
+{
+  "id": "aria-flowto",
+  "nameKo": "읽기 순서 변경",
+  "type": "property",
+  "category": "relationship",
+  "description": "기본 문서 순서와 다른 대안적 읽기 순서를 제공합니다.",
+  "screenReaderSupport": {
+    "jaws": "partial",
+    "nvda": "none",
+    "voiceover": "none",
+    "talkback": "none"
+  },
+  "wcagSC": [
+    "1.3.2"
+  ],
+  "goodCode": "<div aria-flowto=\"step-2\">\n  1단계 내용\n</div>\n<div id=\"sidebar\">사이드바</div>\n<div id=\"step-2\">\n  2단계 내용\n</div>",
+  "badCode": "<!-- DOM 순서와 읽기 순서가 다를 때\n     aria-flowto 없이는 DOM 순서대로 읽힘 -->",
+  "speechContext": "aria-flowto 적용 시",
+  "speech": {
+    "jaws": "(Insert+Alt+n으로 이동 가능, 일부 지원)",
+    "nvda": "(미지원)",
+    "voiceover": "(미지원)",
+    "talkback": "(미지원)"
+  },
+  "notes": "지원이 매우 제한적입니다. CSS 순서 변경이나 DOM 순서 조정을 권장합니다.",
+  "supportNote": "unknown - very limited"
+}

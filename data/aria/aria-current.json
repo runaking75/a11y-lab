@@ -1,0 +1,27 @@
+{
+  "id": "aria-current",
+  "nameKo": "현재 항목 표시",
+  "type": "state",
+  "category": "widget",
+  "description": "컨테이너나 관련 요소 집합 내에서 현재 항목을 나타냅니다. page, step, location, date, time, true 값을 가집니다.",
+  "screenReaderSupport": {
+    "jaws": "full",
+    "nvda": "full",
+    "voiceover": "partial",
+    "talkback": "partial"
+  },
+  "wcagSC": [
+    "1.3.1"
+  ],
+  "goodCode": "<nav>\n  <a href=\"/\" aria-current=\"page\">홈</a>\n  <a href=\"/about\">소개</a>\n</nav>",
+  "badCode": "<nav>\n  <a href=\"/\" class=\"active\">홈</a>\n  <a href=\"/about\">소개</a>\n</nav>\n<!-- CSS만으로 현재 페이지 표시 -->",
+  "speechContext": "a에 aria-current=\"page\" 적용 시",
+  "speech": {
+    "jaws": "홈, 현재 페이지, 링크",
+    "nvda": "홈, 현재, 링크",
+    "voiceover": "현재 페이지, 홈, 링크",
+    "talkback": "홈, 현재 페이지, 링크"
+  },
+  "notes": "네비게이션에서 현재 위치를 알리는 데 사용합니다.",
+  "supportNote": "partial (53/66)"
+}
