@@ -274,20 +274,22 @@ var Dict = {
     });
     h += '</div>';
 
-    h += '<div class="dict-section dict-section--flush"><table class="dict-compare-table"><thead><tr><th class="dict-compare-table__label">속성</th>';
-    group.attrs.forEach(function(a) { h += '<th class="dict-compare-table__head">' + a + '</th>'; });
-    h += '</tr></thead><tbody>';
-    comp.rows.forEach(function(row) {
-      h += '<tr><td class="dict-compare-table__label">' + row.label + '</td>';
-      row.values.forEach(function(v) { h += '<td class="dict-compare-table__cell">' + v + '</td>'; });
-      h += '</tr>';
-    });
-    h += '</tbody></table></div>';
+    if (comp) {
+      h += '<div class="dict-section dict-section--flush"><table class="dict-compare-table"><thead><tr><th class="dict-compare-table__label">속성</th>';
+      group.attrs.forEach(function(a) { h += '<th class="dict-compare-table__head">' + a + '</th>'; });
+      h += '</tr></thead><tbody>';
+      comp.rows.forEach(function(row) {
+        h += '<tr><td class="dict-compare-table__label">' + row.label + '</td>';
+        row.values.forEach(function(v) { h += '<td class="dict-compare-table__cell">' + v + '</td>'; });
+        h += '</tr>';
+      });
+      h += '</tbody></table></div>';
 
-    if (group.notes && group.notes.length) {
-      h += '<div class="dict-section"><h2 class="al-section-title">주의사항</h2><div class="dict-compare-notes">';
-      group.notes.forEach(function(n) { h += '<div class="dict-compare-note">' + n + '</div>'; });
-      h += '</div></div>';
+      if (comp.notes && comp.notes.length) {
+        h += '<div class="dict-section"><h2 class="al-section-title">주의사항</h2><div class="dict-compare-notes">';
+        comp.notes.forEach(function(n) { h += '<div class="dict-compare-note">' + n + '</div>'; });
+        h += '</div></div>';
+      }
     }
 
     h += '</div>';

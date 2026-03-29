@@ -9,7 +9,8 @@
     "type": "ox",
     "question": "장식용 이미지에는 alt=\"\"(빈 대체 텍스트)를 사용해야 한다.",
     "answer": true,
-    "explanation": "장식용 이미지는 정보를 전달하지 않으므로 alt=\"\"로 비워 스크린리더가 건너뛰게 합니다. alt 속성을 아예 생략하면 파일명을 읽을 수 있습니다."
+    "explanation": "장식용 이미지는 정보를 전달하지 않으므로 alt=\"\"로 비워 스크린리더가 건너뛰게 합니다. alt 속성을 아예 생략하면 파일명을 읽을 수 있습니다.",
+    "role": "general"
   },
   {
     "id": "q-1-1-1b",
@@ -27,7 +28,8 @@
       "아이콘 옆에 display:none으로 텍스트를 넣는다"
     ],
     "answer": 1,
-    "explanation": "aria-label은 접근 가능한 이름을 직접 제공합니다. title은 스크린리더마다 읽는 방식이 다르고, placeholder는 입력 필드 전용이며, display:none은 스크린리더에서도 숨겨집니다."
+    "explanation": "aria-label은 접근 가능한 이름을 직접 제공합니다. title은 스크린리더마다 읽는 방식이 다르고, placeholder는 입력 필드 전용이며, display:none은 스크린리더에서도 숨겨집니다.",
+    "role": "general"
   },
   {
     "id": "q-1-3-1",
@@ -39,7 +41,8 @@
     "type": "ox",
     "question": "시각적으로 제목처럼 보이면 heading 태그를 쓰지 않아도 된다.",
     "answer": false,
-    "explanation": "시각적 스타일과 관계없이 의미적으로 제목이면 h1~h6 태그를 사용해야 합니다. 스크린리더는 시각적 스타일이 아닌 HTML 태그로 문서 구조를 파악합니다."
+    "explanation": "시각적 스타일과 관계없이 의미적으로 제목이면 h1~h6 태그를 사용해야 합니다. 스크린리더는 시각적 스타일이 아닌 HTML 태그로 문서 구조를 파악합니다.",
+    "role": "general"
   },
   {
     "id": "q-2-1-1",
@@ -57,7 +60,8 @@
       "<input type=\"submit\" value=\"전송\">"
     ],
     "answer": 2,
-    "explanation": "div는 기본적으로 키보드 포커스를 받지 못하고 Enter/Space 키 이벤트도 없습니다. button, a, input은 네이티브 키보드 접근을 지원합니다."
+    "explanation": "div는 기본적으로 키보드 포커스를 받지 못하고 Enter/Space 키 이벤트도 없습니다. button, a, input은 네이티브 키보드 접근을 지원합니다.",
+    "role": "general"
   },
   {
     "id": "q-2-4-6",
@@ -69,7 +73,8 @@
     "type": "ox",
     "question": "페이지에서 h1 다음에 바로 h3을 사용해도 WCAG 위반이 아니다.",
     "answer": true,
-    "explanation": "WCAG 2.4.6은 제목이 콘텐츠를 설명해야 한다고 요구하지, 제목 레벨 순서를 강제하지 않습니다. 다만 1.3.1에서 정보 관계를 전달해야 하므로 논리적 순서를 권장합니다."
+    "explanation": "WCAG 2.4.6은 제목이 콘텐츠를 설명해야 한다고 요구하지, 제목 레벨 순서를 강제하지 않습니다. 다만 1.3.1에서 정보 관계를 전달해야 하므로 논리적 순서를 권장합니다.",
+    "role": "general"
   },
   {
     "id": "q-4-1-2",
@@ -87,7 +92,8 @@
       "aria-pressed + aria-label"
     ],
     "answer": 1,
-    "explanation": "switch 역할에는 현재 상태(aria-checked)와 접근 가능한 이름이 모두 필요합니다. aria-expanded는 펼침/접힘용이고, aria-pressed는 토글 버튼용입니다."
+    "explanation": "switch 역할에는 현재 상태(aria-checked)와 접근 가능한 이름이 모두 필요합니다. aria-expanded는 펼침/접힘용이고, aria-pressed는 토글 버튼용입니다.",
+    "role": "general"
   },
   {
     "id": "q-kwcag-1-1-1",
@@ -99,7 +105,8 @@
     "type": "ox",
     "question": "KWCAG 2.2에서 텍스트가 포함된 이미지의 대체 텍스트는 이미지 내 텍스트와 동일해야 한다.",
     "answer": true,
-    "explanation": "KWCAG 2.2 '1.1.1 대체 텍스트 제공'에 따르면 텍스트가 포함된 이미지의 대체 텍스트는 해당 텍스트와 동일하게 제공해야 합니다."
+    "explanation": "KWCAG 2.2 '1.1.1 대체 텍스트 제공'에 따르면 텍스트가 포함된 이미지의 대체 텍스트는 해당 텍스트와 동일하게 제공해야 합니다.",
+    "role": "general"
   },
   {
     "id": "q-kwcag-2-1-1",
@@ -114,28 +121,11 @@
       "마우스와 동일한 호버 효과",
       "키보드만으로 접근, 사용 가능",
       "탭 순서가 시각적 순서와 일치",
-      "포커스 표시가 항상 보임"
+      "포커스 표시선이 항상 보임"
     ],
     "answer": 1,
-    "explanation": "KWCAG 2.2 '2.1.1 키보드 사용 보장'은 모든 기능을 키보드만으로 접근하고 사용할 수 있어야 한다고 요구합니다. 나머지는 관련 있지만 이 항목의 핵심 요구사항은 아닙니다."
-  },
-  {
-    "id": "q-1-4-3",
-    "standard": "WCAG",
-    "sc": "1.4.3",
-    "scName": "Contrast (Minimum)",
-    "level": "AA",
-    "category": "perceivable",
-    "type": "choice",
-    "question": "WCAG 2.2에서 일반 텍스트의 최소 명도 대비는?",
-    "choices": [
-      "3:1",
-      "4.5:1",
-      "7:1",
-      "2:1"
-    ],
-    "answer": 1,
-    "explanation": "일반 크기 텍스트는 배경과 4.5:1 이상의 명도 대비가 필요합니다. 큰 텍스트(18pt 이상 또는 14pt 볼드)는 3:1로 완화됩니다."
+    "explanation": "KWCAG 2.2 '2.1.1 키보드 사용 보장'은 모든 기능을 키보드만으로 접근하고 사용할 수 있어야 한다고 요구합니다. 나머지는 관련 있지만 이 항목의 핵심 요구사항은 아닙니다.",
+    "role": "general"
   },
   {
     "id": "q-2-4-7",
@@ -145,9 +135,10 @@
     "level": "AA",
     "category": "operable",
     "type": "ox",
-    "question": "outline: none으로 포커스 표시를 제거하면 WCAG 위반이다.",
+    "question": "outline: none으로 포커스 표시선를 제거하면 WCAG 위반이다.",
     "answer": true,
-    "explanation": "키보드 사용자는 현재 포커스 위치를 시각적으로 확인할 수 있어야 합니다. outline을 제거하려면 반드시 동등한 커스텀 포커스 스타일을 제공해야 합니다."
+    "explanation": "키보드 사용자는 현재 포커스 위치를 시각적으로 확인할 수 있어야 합니다. outline을 제거하려면 반드시 동등한 커스텀 포커스 스타일을 제공해야 합니다.",
+    "role": "general"
   },
   {
     "id": "q-3-3-1",
@@ -165,7 +156,8 @@
       "페이지 상단에 에러 수를 표시한다"
     ],
     "answer": 1,
-    "explanation": "색상만으로 에러를 표시하면 색각 이상 사용자가 인지할 수 없습니다. 에러는 텍스트로 설명하고, aria-describedby 등으로 해당 입력 필드와 프로그래밍적으로 연결해야 합니다."
+    "explanation": "색상만으로 에러를 표시하면 색각 이상 사용자가 인지할 수 없습니다. 에러는 텍스트로 설명하고, aria-describedby 등으로 해당 입력 필드와 프로그래밍적으로 연결해야 합니다.",
+    "role": "general"
   },
   {
     "id": "q-4-1-3",
@@ -177,7 +169,8 @@
     "type": "ox",
     "question": "장바구니에 상품을 담은 후 토스트 알림이 나타나면, 포커스를 토스트로 이동시켜야 한다.",
     "answer": false,
-    "explanation": "토스트 같은 상태 메시지는 포커스 이동 없이 aria-live 영역을 통해 스크린리더에 전달해야 합니다. 포커스를 이동시키면 사용자의 현재 작업 흐름이 중단됩니다."
+    "explanation": "토스트 같은 상태 메시지는 포커스 이동 없이 aria-live 영역을 통해 스크린리더에 전달해야 합니다. 포커스를 이동시키면 사용자의 현재 작업 흐름이 중단됩니다.",
+    "role": "general"
   },
   {
     "id": "q-2-5-8",
@@ -195,7 +188,8 @@
       "32x32px"
     ],
     "answer": 1,
-    "explanation": "WCAG 2.2의 2.5.8 Target Size (Minimum)은 최소 24x24 CSS 픽셀을 요구합니다. 44x44px은 AAA 수준(2.5.5)의 권장 크기입니다."
+    "explanation": "WCAG 2.2의 2.5.8 Target Size (Minimum)은 최소 24x24 CSS 픽셀을 요구합니다. 44x44px은 AAA 수준(2.5.5)의 권장 크기입니다.",
+    "role": "general"
   },
   {
     "id": "q-1-3-5",
@@ -207,7 +201,8 @@
     "type": "ox",
     "question": "이름, 이메일 같은 개인 정보 입력 필드에 autocomplete 속성을 제공하면 WCAG 준수에 도움이 된다.",
     "answer": true,
-    "explanation": "autocomplete 속성은 입력 필드의 용도를 프로그래밍적으로 알려줍니다. 인지 장애가 있는 사용자에게 자동 완성 기능을 제공하고, 브라우저가 적절한 아이콘이나 힌트를 표시할 수 있게 합니다."
+    "explanation": "autocomplete 속성은 입력 필드의 용도를 프로그래밍적으로 알려줍니다. 인지 장애가 있는 사용자에게 자동 완성 기능을 제공하고, 브라우저가 적절한 아이콘이나 힌트를 표시할 수 있게 합니다.",
+    "role": "general"
   },
   {
     "id": "q-kwcag-1-3-1",
@@ -219,7 +214,8 @@
     "type": "ox",
     "question": "KWCAG 2.2에서 링크를 파란색으로만 구분하고 밑줄이 없으면 위반이다.",
     "answer": true,
-    "explanation": "KWCAG 2.2 '1.3.1 색에 무관한 콘텐츠 인식'에 따르면 색상만으로 정보를 전달해서는 안 됩니다. 링크는 밑줄, 볼드 등 색상 외의 방법으로도 구분되어야 합니다."
+    "explanation": "KWCAG 2.2 '1.3.1 색에 무관한 콘텐츠 인식'에 따르면 색상만으로 정보를 전달해서는 안 됩니다. 링크는 밑줄, 볼드 등 색상 외의 방법으로도 구분되어야 합니다.",
+    "role": "general"
   },
   {
     "id": "q-kwcag-2-2-1",
@@ -237,7 +233,8 @@
       "초점 색상은 반드시 파란색이어야 한다"
     ],
     "answer": 3,
-    "explanation": "KWCAG 2.2 '2.2.1 초점 이동과 표시'는 논리적 이동 순서, 시각적 구별, 화면 내 유지를 요구하지만, 특정 색상을 강제하지 않습니다."
+    "explanation": "KWCAG 2.2 '2.2.1 초점 이동과 표시'는 논리적 이동 순서, 시각적 구별, 화면 내 유지를 요구하지만, 특정 색상을 강제하지 않습니다.",
+    "role": "general"
   },
   {
     "id": "q-kwcag-3-1-1",
@@ -249,7 +246,8 @@
     "type": "ox",
     "question": "KWCAG 2.2에서 웹 페이지의 기본 언어를 HTML lang 속성으로 표시하는 것은 필수이다.",
     "answer": true,
-    "explanation": "KWCAG 2.2 '3.1.1 기본 언어 표시'에 따르면 웹 페이지의 기본 인간 언어를 프로그래밍적으로 알 수 있도록 해야 합니다. 한국어 페이지는 lang=\"ko\"를 사용합니다."
+    "explanation": "KWCAG 2.2 '3.1.1 기본 언어 표시'에 따르면 웹 페이지의 기본 인간 언어를 프로그래밍적으로 알 수 있도록 해야 합니다. 한국어 페이지는 lang=\"ko\"를 사용합니다.",
+    "role": "general"
   },
   {
     "id": "q-kwcag-4-2-1",
@@ -261,7 +259,8 @@
     "type": "ox",
     "question": "KWCAG 2.2에서 웹 애플리케이션은 WAI-ARIA를 사용하여 접근성을 보장해야 한다.",
     "answer": true,
-    "explanation": "KWCAG 2.2 '4.2.1 웹 애플리케이션 접근성 준수'에 따르면 콘텐츠에 포함된 웹 애플리케이션은 접근성이 있어야 하며, WAI-ARIA를 활용하여 접근성을 보장해야 합니다."
+    "explanation": "KWCAG 2.2 '4.2.1 웹 애플리케이션 접근성 준수'에 따르면 콘텐츠에 포함된 웹 애플리케이션은 접근성이 있어야 하며, WAI-ARIA를 활용하여 접근성을 보장해야 합니다.",
+    "role": "general"
   },
   {
     "id": "q-2-1-1b",
@@ -273,7 +272,8 @@
     "type": "ox",
     "question": "tabindex=\"0\"을 div에 추가하면 키보드 접근성이 완전히 보장된다.",
     "answer": false,
-    "explanation": "tabindex=\"0\"은 포커스만 가능하게 합니다. 클릭 동작을 하려면 Enter/Space 키 이벤트도 별도로 처리해야 합니다. 가능하면 button이나 a 같은 네이티브 요소를 사용하는 것이 좋습니다."
+    "explanation": "tabindex=\"0\"은 포커스만 가능하게 합니다. 클릭 동작을 하려면 Enter/Space 키 이벤트도 별도로 처리해야 합니다. 가능하면 button이나 a 같은 네이티브 요소를 사용하는 것이 좋습니다.",
+    "role": "general"
   },
   {
     "id": "q-1-4-11",
@@ -291,6 +291,294 @@
       "2:1"
     ],
     "answer": 1,
-    "explanation": "UI 컴포넌트와 그래픽 요소는 배경과 최소 3:1의 명도 대비가 필요합니다. 이는 텍스트(4.5:1)보다 낮지만, 버튼 테두리, 체크박스, 차트 등에 적용됩니다."
+    "explanation": "UI 컴포넌트와 그래픽 요소는 배경과 최소 3:1의 명도 대비가 필요합니다. 이는 텍스트(4.5:1)보다 낮지만, 버튼 테두리, 체크박스, 차트 등에 적용됩니다.",
+    "role": "general"
+  },
+  {
+    "id": "d-contrast-text",
+    "standard": "WCAG",
+    "sc": "1.4.3",
+    "scName": "Contrast (Minimum)",
+    "level": "AA",
+    "category": "perceivable",
+    "type": "choice",
+    "question": "일반 텍스트(18px 미만)의 최소 명도 대비 기준과 큰 텍스트(18px 이상)의 기준은?",
+    "choices": [
+      "일반 4.5:1 / 큰 텍스트 3:1",
+      "일반 3:1 / 큰 텍스트 2:1",
+      "일반 7:1 / 큰 텍스트 4.5:1",
+      "일반 4.5:1 / 큰 텍스트 4.5:1"
+    ],
+    "answer": 0,
+    "explanation": "일반 텍스트는 배경과 4.5:1 이상, 큰 텍스트(18px 이상 또는 14px bold 이상)는 3:1 이상이 필요합니다. 7:1은 AAA 기준입니다.",
+    "role": "designer"
+  },
+  {
+    "id": "d-nontext-contrast",
+    "standard": "WCAG",
+    "sc": "1.4.11",
+    "scName": "Non-text Contrast",
+    "level": "AA",
+    "category": "perceivable",
+    "type": "choice",
+    "question": "버튼 테두리, 입력 필드 테두리, 아이콘 등 비텍스트 UI 요소의 최소 명도 대비는?",
+    "choices": [
+      "4.5:1",
+      "3:1",
+      "7:1",
+      "2:1"
+    ],
+    "answer": 1,
+    "explanation": "SC 1.4.11 Non-text Contrast에 따라 비텍스트 UI 요소는 배경과 최소 3:1의 명도 대비가 필요합니다.",
+    "role": "designer"
+  },
+  {
+    "id": "d-color-only",
+    "standard": "WCAG",
+    "sc": "1.4.1",
+    "scName": "Use of Color",
+    "level": "A",
+    "category": "perceivable",
+    "type": "ox",
+    "question": "필수 입력 항목을 빨간색 테두리로만 구분하고 별도 텍스트나 아이콘을 제공하지 않으면 WCAG 위반이다.",
+    "answer": true,
+    "explanation": "SC 1.4.1에 따라 색상만으로 정보를 전달해서는 안 됩니다. 남성의 약 8%가 색각 이상이므로 \"(필수)\" 텍스트, 별표(*), 아이콘 등을 병행해야 합니다.",
+    "role": "designer"
+  },
+  {
+    "id": "d-disabled-contrast",
+    "standard": "WCAG",
+    "sc": "1.4.3",
+    "scName": "Contrast (Minimum)",
+    "level": "AA",
+    "category": "perceivable",
+    "type": "ox",
+    "question": "비활성(disabled) 상태의 버튼은 WCAG 명도 대비 기준의 예외이므로 4.5:1을 충족하지 않아도 된다.",
+    "answer": true,
+    "explanation": "비활성 UI 컴포넌트는 명도 대비 기준의 예외입니다. 다만, 비활성 요소의 존재 자체는 인지할 수 있어야 하고, 색상만으로 활성/비활성을 구분하지 말아야 합니다.",
+    "role": "designer"
+  },
+  {
+    "id": "d-darkmode",
+    "standard": "WCAG",
+    "sc": "1.4.3",
+    "scName": "Contrast (Minimum)",
+    "level": "AA",
+    "category": "perceivable",
+    "type": "ox",
+    "question": "라이트모드에서 명도 대비를 통과했으면 다크모드에서는 별도 검증 없이도 WCAG를 충족한다.",
+    "answer": false,
+    "explanation": "라이트모드와 다크모드는 배경색이 다르므로 각각 별도로 명도 대비를 검증해야 합니다. 라이트모드에서 통과해도 다크모드에서 실패할 수 있습니다.",
+    "role": "designer"
+  },
+  {
+    "id": "d-text-resize",
+    "standard": "WCAG",
+    "sc": "1.4.4",
+    "scName": "Resize Text",
+    "level": "AA",
+    "category": "perceivable",
+    "type": "choice",
+    "question": "텍스트 크기 확대 시 콘텐츠 손실을 방지하기 위해 디자이너가 피해야 하는 것은?",
+    "choices": [
+      "min-height 사용",
+      "고정 높이(height: 40px) 지정",
+      "rem 단위 사용",
+      "미디어 쿼리 사용"
+    ],
+    "answer": 1,
+    "explanation": "고정 높이(height: 40px)를 사용하면 텍스트 확대 시 콘텐츠가 잘립니다. min-height를 사용하고, overflow: hidden도 주의해야 합니다.",
+    "role": "designer"
+  },
+  {
+    "id": "d-color-palette",
+    "standard": "WCAG",
+    "sc": "1.4.1",
+    "scName": "Use of Color",
+    "level": "A",
+    "category": "perceivable",
+    "type": "choice",
+    "question": "색상 팔레트 설계 시 색각 이상 사용자를 위해 검증해야 하는 것은?",
+    "choices": [
+      "색상의 채도(Saturation) 차이",
+      "적녹색맹(Protanopia/Deuteranopia) 시뮬레이션",
+      "CMYK 변환 결과",
+      "모니터 캘리브레이션"
+    ],
+    "answer": 1,
+    "explanation": "디자인 시스템의 색상 팔레트는 적녹색맹 시뮬레이션으로 검증해야 합니다. 오류=빨강, 성공=초록만으로 구분하면 색각 이상 사용자가 인지할 수 없습니다.",
+    "role": "designer"
+  },
+  {
+    "id": "d-touch-target",
+    "standard": "WCAG",
+    "sc": "2.5.8",
+    "scName": "Target Size (Minimum)",
+    "level": "AA",
+    "category": "operable",
+    "type": "choice",
+    "question": "WCAG 2.2의 터치 타겟 최소 크기(AA)와 향상된 크기(AAA)는?",
+    "choices": [
+      "AA: 24×24px / AAA: 44×44px",
+      "AA: 44×44px / AAA: 48×48px",
+      "AA: 32×32px / AAA: 44×44px",
+      "AA: 20×20px / AAA: 24×24px"
+    ],
+    "answer": 0,
+    "explanation": "SC 2.5.8 (AA)은 최소 24×24 CSS 픽셀, SC 2.5.5 (AAA)는 44×44px을 요구합니다. KWCAG 2.1.3도 모바일 환경에서 최소 24×24px을 요구합니다.",
+    "role": "designer"
+  },
+  {
+    "id": "d-focus-remove",
+    "standard": "WCAG",
+    "sc": "2.4.7",
+    "scName": "Focus Visible",
+    "level": "AA",
+    "category": "operable",
+    "type": "ox",
+    "question": "CSS에서 outline: none으로 기본 포커스 표시선를 제거하고 커스텀 포커스 스타일을 제공하지 않으면 WCAG 위반이다.",
+    "answer": true,
+    "explanation": "SC 2.4.7에 따라 키보드 포커스는 반드시 시각적으로 표시되어야 합니다. outline: none 사용 시 반드시 동등한 커스텀 포커스 스타일을 제공해야 합니다.",
+    "role": "designer"
+  },
+  {
+    "id": "d-focus-style",
+    "standard": "WCAG",
+    "sc": "2.4.13",
+    "scName": "Focus Appearance",
+    "level": "AAA",
+    "category": "operable",
+    "type": "choice",
+    "question": "WCAG AAA 기준에서 요구하는 포커스 표시선의 형태 기준은?",
+    "choices": [
+      "배경색 변경으로 충분하다",
+      "인접 배경과 3:1 이상 대비 + 요소 둘레 2px 두께 면적",
+      "테두리 색상이 #000000이어야 한다",
+      "포커스 표시선의 두께가 4px 이상이어야 한다"
+    ],
+    "answer": 1,
+    "explanation": "SC 2.4.13 (AAA)은 포커스 표시선이 인접 배경과 3:1 이상 대비, 요소 둘레 2px 두께 면적을 확보해야 합니다.",
+    "role": "designer"
+  },
+  {
+    "id": "d-design-handoff",
+    "standard": "WCAG",
+    "sc": "2.4.7",
+    "scName": "Focus Visible",
+    "level": "AA",
+    "category": "operable",
+    "type": "choice",
+    "question": "디자인 시안에서 개발자에게 반드시 명시해야 할 접근성 항목이 아닌 것은?",
+    "choices": [
+      "포커스 스타일(outline 색상, 두께, offset)",
+      "hover, disabled, error 등 상태별 스타일",
+      "브라우저 기본 스타일 리셋 방법",
+      "터치 타겟 영역(최소 24×24px)"
+    ],
+    "answer": 2,
+    "explanation": "디자인 시안에는 포커스 스타일, 상태별 스타일, 터치 타겟 영역, 색상 대비 값 등을 명시해야 합니다. 브라우저 리셋은 개발 영역입니다.",
+    "role": "designer"
+  },
+  {
+    "id": "d-animation",
+    "standard": "WCAG",
+    "sc": "2.3.1",
+    "scName": "Three Flashes or Below Threshold",
+    "level": "A",
+    "category": "operable",
+    "type": "ox",
+    "question": "1초에 3회 이상 번쩍이는 콘텐츠는 광과민성 발작을 유발할 수 있으므로 WCAG에서 금지한다.",
+    "answer": true,
+    "explanation": "SC 2.3.1에 따라 1초에 3회 이상 번쩍이는 콘텐츠는 금지됩니다. 또한 prefers-reduced-motion 미디어 쿼리를 지원해야 합니다.",
+    "role": "designer"
+  },
+  {
+    "id": "d-reflow",
+    "standard": "WCAG",
+    "sc": "1.4.10",
+    "scName": "Reflow",
+    "level": "AA",
+    "category": "perceivable",
+    "type": "choice",
+    "question": "WCAG 리플로우 기준에서 가로 스크롤 없이 콘텐츠를 읽을 수 있어야 하는 최소 너비는?",
+    "choices": [
+      "480px",
+      "360px",
+      "320px",
+      "240px"
+    ],
+    "answer": 2,
+    "explanation": "SC 1.4.10에 따라 320px 너비에서 가로 스크롤 없이 콘텐츠를 읽을 수 있어야 합니다. 이는 저시력 사용자가 400% 확대할 때의 화면에 해당합니다.",
+    "role": "designer"
+  },
+  {
+    "id": "d-typography",
+    "standard": "WCAG",
+    "sc": "1.4.12",
+    "scName": "Text Spacing",
+    "level": "AA",
+    "category": "perceivable",
+    "type": "choice",
+    "question": "본문 텍스트의 줄 간격(line-height)은 글꼴 크기의 최소 몇 배 이상을 확보해야 하는가?",
+    "choices": [
+      "1.2배",
+      "1.5배",
+      "2.0배",
+      "1.0배"
+    ],
+    "answer": 1,
+    "explanation": "SC 1.4.12 Text Spacing(AA)에 따라 줄 간격은 글꼴 크기의 1.5배 이상, 문단 간격은 글꼴 크기의 2배 이상, 글자 간격 0.12em 이상, 단어 간격 0.16em 이상으로 조정해도 콘텐츠 손실이 없어야 합니다. 참고로 한 줄 최대 80자 제한과 양쪽 정렬 금지는 SC 1.4.8(AAA) 기준입니다.",
+    "role": "designer"
+  },
+  {
+    "id": "d-chart-a11y",
+    "standard": "WCAG",
+    "sc": "1.1.1",
+    "scName": "Non-text Content",
+    "level": "A",
+    "category": "perceivable",
+    "type": "choice",
+    "question": "차트/그래프의 접근성을 위해 반드시 제공해야 하는 것은?",
+    "choices": [
+      "차트의 해상도를 높인다",
+      "색상 외의 구분(패턴, 라벨) 또는 데이터 테이블을 함께 제공한다",
+      "차트 크기를 키운다",
+      "차트에 애니메이션을 추가한다"
+    ],
+    "answer": 1,
+    "explanation": "차트의 데이터 계열을 색상만으로 구분하지 않고 패턴, 모양, 직접 라벨링을 병행해야 합니다. 데이터 테이블을 함께 제공하면 스크린리더 사용자 접근성이 더 향상됩니다.",
+    "role": "designer"
+  },
+  {
+    "id": "d-mobile-gesture",
+    "standard": "WCAG",
+    "sc": "2.5.1",
+    "scName": "Pointer Gestures",
+    "level": "A",
+    "category": "operable",
+    "type": "ox",
+    "question": "모바일 앱에서 스와이프로만 삭제할 수 있고 버튼 등 단일 포인터 대안이 없으면 WCAG 위반이다.",
+    "answer": true,
+    "explanation": "SC 2.5.1에 따라 스와이프, 핀치 등 복잡한 제스처에는 반드시 버튼 등 단일 포인터(탭) 대안을 제공해야 합니다.",
+    "role": "designer"
+  },
+  {
+    "id": "d-font-size",
+    "standard": "WCAG",
+    "sc": "1.4.4",
+    "scName": "Resize Text",
+    "level": "AA",
+    "category": "perceivable",
+    "type": "choice",
+    "role": "designer",
+    "question": "WCAG에서 규정하는 본문 텍스트의 최소 크기는?",
+    "choices": [
+      "12px",
+      "14px",
+      "16px",
+      "규정 없음"
+    ],
+    "answer": 3,
+    "explanation": "WCAG에서 폰트 크기의 최솟값은 규정하지 않습니다. SC 1.4.4 Resize Text는 200% 확대 시 콘텐츠 손실이 없어야 한다는 것이고, SC 1.4.12 Text Spacing은 줄 간격, 문단 간격, 글자 간격, 단어 간격 조정에 관한 기준입니다."
   }
 ]

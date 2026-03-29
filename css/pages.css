@@ -326,3 +326,4 @@ a.au-board__sc:hover{opacity:0.8}
   .al-detail-title{font-size:var(--text-xl)}
   .qz-choices--ox{flex-direction:column}
 }
+.al-mobile-chips__sep{color:var(--border);font-size:var(--text-sm);align-self:center}

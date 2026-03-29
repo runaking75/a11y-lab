@@ -6,6 +6,7 @@ var Quiz = {
   answered: false,
   activeStandard: '',
   activeCategory: '',
+  activeRole: '',
   mode: 'setup',
   wrongAnswers: [],
 
@@ -13,6 +14,12 @@ var Quiz = {
     { key: '', label: '전체' },
     { key: 'WCAG', label: 'WCAG 2.2' },
     { key: 'KWCAG', label: 'KWCAG 2.2' }
+  ],
+
+  roles: [
+    { key: '', label: '전체' },
+    { key: 'general', label: '공통' },
+    { key: 'designer', label: '디자이너' }
   ],
 
   categories: [
@@ -53,6 +60,10 @@ var Quiz = {
             '<div class="al-chips" id="qz-cat" role="group" aria-labelledby="cat2-label"></div>' +
           '</div>' +
           '<div class="al-sidebar__group">' +
+            '<div class="al-sidebar__label" id="role-label">대상</div>' +
+            '<div class="al-chips" id="qz-role" role="group" aria-labelledby="role-label"></div>' +
+          '</div>' +
+          '<div class="al-sidebar__group">' +
             '<div class="al-sidebar__label">문제 풀</div>' +
             '<div id="qz-pool-info"></div>' +
           '</div>' +
@@ -71,6 +82,11 @@ var Quiz = {
     document.getElementById('qz-cat').innerHTML = this.categories.map(function(c) {
       var isActive = c.key === self.activeCategory;
       return '<button type="button" class="al-chip' + (isActive ? ' is-active' : '') + '" data-cat="' + c.key + '" aria-pressed="' + isActive + '">' + c.label + '</button>';
+    }).join('');
+
+    document.getElementById('qz-role').innerHTML = this.roles.map(function(r) {
+      var isActive = r.key === self.activeRole;
+      return '<button type="button" class="al-chip' + (isActive ? ' is-active' : '') + '" data-role="' + r.key + '" aria-pressed="' + isActive + '">' + r.label + '</button>';
     }).join('');
 
     document.getElementById('qz-std').addEventListener('click', function(e) {
@@ -97,6 +113,26 @@ var Quiz = {
       self.updatePool();
     });
 
+    document.getElementById('qz-role').addEventListener('click', function(e) {
+      var chip = e.target.closest('.al-chip');
+      if (!chip) return;
+      self.activeRole = chip.dataset.role;
+      if (self.activeRole === 'designer') {
+        self.activeStandard = '';
+        document.getElementById('qz-std').querySelectorAll('.al-chip').forEach(function(c) {
+          var active = c.dataset.std === '';
+          c.classList.toggle('is-active', active);
+          c.setAttribute('aria-pressed', active);
+        });
+      }
+      this.querySelectorAll('.al-chip').forEach(function(c) {
+        var active = c.dataset.role === self.activeRole;
+        c.classList.toggle('is-active', active);
+        c.setAttribute('aria-pressed', active);
+      });
+      self.updatePool();
+    });
+
     this.updatePool();
     this.renderMobileChips();
 
@@ -104,7 +140,15 @@ var Quiz = {
       var chip = e.target.closest('.al-chip');
       if (!chip) return;
       e.preventDefault();
-      self.activeStandard = chip.dataset.std;
+      if (chip.dataset.std !== undefined) {
+        self.activeStandard = chip.dataset.std;
+      }
+      if (chip.dataset.role !== undefined) {
+        self.activeRole = chip.dataset.role;
+        if (self.activeRole === 'designer') {
+          self.activeStandard = '';
+        }
+      }
       self.activeCategory = '';
       self.mode = 'setup';
       self.renderMobileChips();
@@ -117,10 +161,16 @@ var Quiz = {
     var el = document.getElementById('qz-mobile-chips');
     if (!el) return;
     var self = this;
-    el.innerHTML = this.standards.map(function(s) {
+    var h = this.standards.map(function(s) {
       var isActive = s.key === self.activeStandard;
       return '<button type="button" class="al-chip' + (isActive ? ' is-active' : '') + '" data-std="' + s.key + '">' + s.label + '</button>';
     }).join('');
+    h += '<span class="al-mobile-chips__sep">|</span>';
+    h += this.roles.map(function(r) {
+      var isActive = r.key === self.activeRole;
+      return '<button type="button" class="al-chip' + (isActive ? ' is-active' : '') + '" data-role="' + r.key + '">' + r.label + '</button>';
+    }).join('');
+    el.innerHTML = h;
   },
 
   getFiltered: function() {
@@ -128,6 +178,7 @@ var Quiz = {
     return this.allQuestions.filter(function(q) {
       if (self.activeStandard && q.standard !== self.activeStandard) return false;
       if (self.activeCategory && q.category !== self.activeCategory) return false;
+      if (self.activeRole && q.role !== self.activeRole) return false;
       return true;
     });
   },
@@ -164,6 +215,9 @@ var Quiz = {
           h += '<option value="' + n + '"' + (n === Math.min(5, max) ? ' selected' : '') + '>' + n + '문제</option>';
         }
       });
+      if (filtered.length > 5 && [5, 10, 15, 20].indexOf(filtered.length) === -1) {
+        h += '<option value="' + filtered.length + '">' + filtered.length + '문제 (전체)</option>';
+      }
       if (filtered.length < 5) {
         h += '<option value="' + filtered.length + '" selected>' + filtered.length + '문제 (전체)</option>';
       }
